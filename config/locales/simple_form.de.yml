@@ -1,0 +1,5 @@
+de:
+  helpers:
+    submit:
+      create: "%{model} hinzufügen"
+      update: "%{model} ändern"

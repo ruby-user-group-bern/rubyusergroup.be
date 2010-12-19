@@ -1,0 +1,13 @@
+.post
+  %h2.title
+    %a= link_to question.title, question
+  %p.meta
+    Posted by
+    %a Someone
+    on March 10, 2010
+    &nbsp;&bull;&nbsp;
+    %a.comments Comments (64)
+    &nbsp;&bull;&nbsp;
+    %a.permalinkFull article
+  .entry
+    %p= question.content

@@ -15,9 +15,9 @@
       #menu
         %ul
           %li.current_page_item
-            %a Home
+            = link_to "Home", root_path
           %li
-            %a Blog
+            = link_to "Neue Frage", new_question_path
           %li
             %a Photos
           %li
@@ -30,6 +30,9 @@
         #page-bgtop
           #page-bgbtm
             #content
+              #flash_messages
+                - flash.each do |type, message|
+                  %div{:class => "flash #{type}"}= message
               = yield
             #sidebar
             .clearfix

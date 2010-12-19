@@ -1,0 +1,8 @@
+de:
+  activerecord:
+    models:
+      question: Frage
+    attributes:
+      question:
+        title: Titel
+        content: Content
