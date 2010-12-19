@@ -15,18 +15,34 @@ Given /^I am a new, authenticated user$/ do
   password = 'secretpass'
 
   Given %{I have one user "#{email}" with password "#{password}" and login "#{login}"}
-  And %{I go to login}
+  When %{I sign in with "#{email}" and password "#{password}"}
+end
+
+When /^I log out$/ do
+  visit('/users/sign_out')
+end
+
+When /^I sign in with "([^"]*)" and password "([^"]*)"$/ do |email, password|
+  And %{I go to the login page}
   And %{I fill in "user_email" with "#{email}"}
   And %{I fill in "user_password" with "#{password}"}
-  And %{I press "Sign in"}
+  And %{I press "Anmelden"}
 end
 
 Then /^I should be logged in$/ do
-  Then %{I should see the flash notice "Angemeldet."}
   And %{I should see "Abmelden"}
 end
 
 Then /^I should not be logged in$/ do
-  Then %{I should not see the flash notice "Angemeldet."}
   And %{I should not see "Abmelden"}
+end
+
+Then /^I should be able to log in with "([^"]*)" and password "([^"]*)"$/ do |email, password|
+  When %{I sign in with "#{email}" and password "#{password}"}
+  Then %{I should be logged in}
+end
+
+Then /^I should not be able to log in with "([^"]*)" and password "([^"]*)"$/ do |email, password|
+  When %{I sign in with "#{email}" and password "#{password}"}
+  Then %{I should not be logged in}
 end

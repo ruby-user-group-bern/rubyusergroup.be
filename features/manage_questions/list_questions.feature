@@ -1,6 +1,9 @@
 @question
 Feature: list questions
 
+  Background:
+    Given I am a new, authenticated user
+
   Scenario: list open questions only
     Given the following questions exists:
       | title                           | solved |

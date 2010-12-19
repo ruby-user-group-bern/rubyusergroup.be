@@ -1,6 +1,9 @@
 @question
 Feature: submit a question
 
+  Background:
+    Given I am a new, authenticated user
+
   Scenario: add a question
     Given I am on the home page
     When I follow "Neue Frage"

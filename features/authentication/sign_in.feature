@@ -9,7 +9,8 @@ Feature: sign in
     And I fill in "E-Mail" with "valid@rugb.ch"
     And I fill in "Passwort" with "secret"
     And I press "Anmelden"
-    Then I should be logged in
+    Then I should see the flash notice "Angemeldet."
+    And I should be logged in
 
   Scenario: can't sign in with non-existing user
     And I fill in "E-Mail" with "invalid@rugb.ch"
