@@ -1,0 +1,37 @@
+%html
+  %head
+    %title RubyusergroupBe
+    = stylesheet_link_tag :all
+    = javascript_include_tag :defaults
+    = stylesheet_link_tag 'template'
+    = csrf_meta_tag
+  %body
+    #wrapper
+      #header
+        #logo
+          %h1 Ruby User Group Bern
+          %p template design by CSS Templates
+        #search
+      #menu
+        %ul
+          %li.current_page_item
+            %a Home
+          %li
+            %a Blog
+          %li
+            %a Photos
+          %li
+            %a About
+          %li
+            %a Links
+          %li
+            %a Contact
+      #page
+        #page-bgtop
+          #page-bgbtm
+            #content
+              = yield
+            #sidebar
+            .clearfix
+    #footer
+      %p Copyright (c) 2010 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/"> CSS Templates</a>.
