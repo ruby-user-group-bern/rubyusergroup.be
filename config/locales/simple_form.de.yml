@@ -3,3 +3,5 @@ de:
     submit:
       create: "%{model} hinzufügen"
       update: "%{model} ändern"
+      user:
+        create: "Anmelden"
