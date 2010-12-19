@@ -1,4 +1,6 @@
-= simple_form_for @question do |f|
+= simple_form_for question do |f|
   = f.input :title
+  - if params[:action] == 'edit'
+    = f.input :solved
   = f.input :content
   = f.button :submit
