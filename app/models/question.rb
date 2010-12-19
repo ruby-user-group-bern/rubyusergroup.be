@@ -1,7 +1,10 @@
 class Question < ActiveRecord::Base
 
+  belongs_to :author, :class_name => 'User'
+
   validates_presence_of :title
   validates_presence_of :content
+  validates_presence_of :author
 
   scope :solved, where(:solved => true)
   scope :unsolved, where(:solved => false)

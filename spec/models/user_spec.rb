@@ -1,5 +1,11 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  it_should_behave_like 'factory creatable'
+
+  describe "associations: " do
+    it { should have_many(:questions) }
+  end
+
 end
