@@ -1,44 +1,46 @@
 %html
   %head
     %title RubyusergroupBe
-    = stylesheet_link_tag :all
+    = stylesheet_link_tag 'application'
     = javascript_include_tag :defaults
-    = stylesheet_link_tag 'template'
     = csrf_meta_tag
   %body
     #wrapper
-      #header
-        #logo
-          %h1 Ruby User Group Bern
-          %p template design by CSS Templates
-        #search
-      #menu
-        - if user_signed_in?
-          %ul
-            %li.current_page_item
-              = link_to "Home", root_path
-            %li
-              = link_to "Neue Frage", new_question_path
-            %li
-              %a Photos
-            %li
-              %a About
-            %li
-              %a Links
-            %li
-              %a Contact
+      #header-wrapper
+        #header
+          #actions-navigation
+            - if user_signed_in?
+              Willkommen
+              = link_to current_user.email, edit_user_registration_path
+              |
+              = link_to "Abmelden", destroy_user_session_path
 
-            %ul
-              %li= link_to "Abmelden", destroy_user_session_path
+          #logo
+            %h1
+              RubyUserGroupBern
+          #menu
+            - if user_signed_in?
+              %ul
+                %li.current_page_item
+                  = link_to "Home", root_path
+                %li
+                  = link_to "Neue Frage", new_question_path
+                %li
+                  %a Photos
+                %li
+                  %a About
+                %li
+                  %a Links
+                %li
+                  %a Contact
+
       #page
-        #page-bgtop
-          #page-bgbtm
-            #content
-              #flash_messages
-                - flash.each do |type, message|
-                  %div{:class => "flash #{type}"}= message
-              = yield
-            #sidebar
-            .clearfix
-    #footer
-      %p Copyright (c) 2010 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/"> CSS Templates</a>.
+        #content
+          #flash_messages
+            - flash.each do |type, message|
+              %div{:class => "flash #{type}"}= message
+          = yield
+        #sidebar
+        .clearfix
+      #footer
+        %p Copyright (c) 2010 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/"> CSS Templates</a>.
