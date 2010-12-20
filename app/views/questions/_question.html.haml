@@ -1,13 +1,14 @@
-.post
-  %h2.title
-    %a= link_to question.title, question
-  %p.meta
-    Posted by
-    %a Someone
-    on March 10, 2010
-    &nbsp;&bull;&nbsp;
-    %a.comments Comments (64)
-    &nbsp;&bull;&nbsp;
-    %a.permalinkFull article
-  .entry
+.question
+  .right
+    %h2
+      %a= link_to question.title, question
     %p= question.content
+  .left
+    .nr #1
+    .posted
+      by
+      %a Someone
+    .date= question.created_at
+    .comments
+      Comments
+      %a (64)

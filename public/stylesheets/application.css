@@ -4,8 +4,8 @@ body {
   margin: 20px 0px 0px 0px;
   padding: 0;
   background: #FFFFFF;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
   color: #000;
 }
 
@@ -44,10 +44,10 @@ a:hover {
 
 #actions-navigation {
   float: right;
+  padding: 5px 0 0 0;
 }
 
 #actions-navigation a {
-  color: #888;
 }
 
 /* Logo */
@@ -55,7 +55,7 @@ a:hover {
 #logo {
   /* float: left; */
   width: 300px;
-  margin: 0;
+  margin: 30px 0 0 0;
   padding: 0;
   color: #000000;
 }
@@ -93,16 +93,27 @@ a:hover {
 }
 
 #content h2 {
+  font-size: 1.6em;
   color: #000;
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
 }
 
+#content h2 a {
+  color: #000;
+  text-decoration: underline;
+}
+
+
+#content h2 a:hover {
+  color: #000;
+  text-decoration: none;
+}
 #content p {
   line-height: 20px;
   color: #555;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 /* Questions */
@@ -124,17 +135,22 @@ a:hover {
 
 #questions .question .right h2 {
   font-size: 1.6em;
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
 }
 
 #questions .question .right p {
   margin: 0 0 10px 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 #questions .question .left .nr {
   font-size: 1.6em;
   color: #bbb;
+  margin: 0 0 5px 0;
+}
+
+#questions .question .left .posted {
+  font-size: 14px;
   margin: 0 0 5px 0;
 }
 
@@ -198,6 +214,7 @@ a:hover {
 
 #menu {
   /* float: right; */
+  margin: 20px 0 0 0;
 }
 
 #menu ul li.current_page_item a {
@@ -235,41 +252,8 @@ a:hover {
 #page {
   width: 1000px;
   margin: 0 auto;
-  padding: 40px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
   border-top: 1px solid #BBBBBB;
-}
-
-#page-bgtop {
-}
-
-/* Post */
-
-.post {
-  margin-bottom: 30px;
-  padding: 0px 0px;
-}
-
-.post .title {
-
-}
-
-.post .title a {
-  letter-spacing: -1px;
-  text-decoration: none;
-  color: #414141;
-  border: none;
-}
-
-.post .entry {
-  padding: 10px 0px 20px 0px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #BBBBBB;
-  text-align: justify;
-}
-
-.post .meta {
-  overflow: hidden;
-  padding-top: 10px;
 }
 
 /* Sidebar */
@@ -394,3 +378,4 @@ a:hover {
 .clearfix {
   clear: both;
 }
+

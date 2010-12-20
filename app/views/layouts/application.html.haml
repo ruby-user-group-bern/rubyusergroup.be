@@ -1,7 +1,12 @@
-%html
+!!! Strict
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
   %head
+    %meta{:content => "", :name => "keywords"}
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}
     %title RubyusergroupBe
-    = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'reset'
+    = stylesheet_link_tag :all
     = javascript_include_tag :defaults
     = csrf_meta_tag
   %body
@@ -14,10 +19,15 @@
               = link_to current_user.email, edit_user_registration_path
               |
               = link_to "Abmelden", destroy_user_session_path
+            - else
+              = link_to "Registrieren", new_user_registration_path
+              |
+              = link_to "Anmelden", new_user_session_path
 
           #logo
             %h1
-              RubyUserGroupBern
+              RubyUserGroup
+              %span>Bern
           #menu
             - if user_signed_in?
               %ul
