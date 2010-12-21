@@ -3,7 +3,7 @@
     %h2
       %a= link_to question.title, question
     %p
-      = question.content
+      = raw question.content
     %span.info= l question.created_at
   .left
     .nr #1

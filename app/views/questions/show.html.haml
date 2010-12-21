@@ -1,5 +1,5 @@
 %h2= @question.title
-%p= @question.content
+%p= raw @question.content
 
 - for answer in @question.answers
   - unless answer.new_record?
