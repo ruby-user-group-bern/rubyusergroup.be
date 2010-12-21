@@ -1,0 +1,74 @@
+div.input {
+  margin: 0 0 10px 0;
+}
+
+label {
+  display: block;
+  width: 150px;
+  float: left;
+  margin: 2px 0 0 0;
+  padding: 4px 3px 3px 3px;
+  font-size: 14px;
+}
+
+label.string {
+  display: block;
+  float: left;
+  margin: 2px 0 0 0;
+  padding: 2px 3px 3px 3px;
+  font-size: 14px;
+}
+
+label.text {
+  display: block;
+  float: left;
+  margin: 2px 0 0 0;
+  padding: 2px 3px 3px 3px;
+  font-size: 14px;
+}
+
+abbr {
+  color: #ff0000;
+  font-size: 14px;
+}
+
+input {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 14px;
+}
+
+input.button {
+  background: #F9F9F9;
+  border: 1px solid #E6E6E6;
+  margin: 5px 0 0 156px;
+  font-size: 14px;
+  padding: 5px;
+  color: #555;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input.string {
+  padding: 2px 3px 3px;
+  width: 300px;
+  background: #F9F9F9;
+  border: 1px solid #E6E6E6;
+  color: #555;
+}
+
+input.password {
+  padding: 2px 3px 3px;
+  width: 300px;
+  background: #F9F9F9;
+  border: 1px solid #E6E6E6;
+  color: #555;
+}
+
+textarea.text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 14px;
+  padding: 2px 3px 3px;
+  width: 400px;
+  background: #F9F9F9;
+  border: 1px solid #E6E6E6;
+  color: #555;
+}
