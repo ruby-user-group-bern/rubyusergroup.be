@@ -1,2 +1,7 @@
 %h2= @question.title
 %p= @question.content
+
+- for answer in @question.answers
+  - unless answer.new_record?
+    = render 'answers/answer', :answer => answer
+= render 'answers/form', :question => @question
