@@ -5,3 +5,5 @@ de:
       update: "%{model} ändern"
       user:
         create: "Anmelden"
+      answer:
+        create: "Antworten"

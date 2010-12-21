@@ -1,0 +1,6 @@
+.answer
+  .left
+    = image_tag avatar_url(answer.author, :size => 65)
+  %p= answer.content
+  %span.info= l answer.created_at
+

@@ -150,10 +150,19 @@ a:hover {
   margin: 0 0 5px 0;
 }
 
-.question .info {
+.info {
   font-style: italic;
   font-size: 0.8em;
   float:right;
+}
+
+.answer {
+  clear: both;
+  margin-bottom: 14px;
+}
+
+.answer .left {
+  float:left;
 }
 
 /* Wrapper */

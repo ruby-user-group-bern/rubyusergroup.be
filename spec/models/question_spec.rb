@@ -6,6 +6,7 @@ describe Question do
 
   describe "associations: " do
     it { should belong_to(:author) }
+    it { should have_many(:answers) }
   end
 
   describe "validations: " do
