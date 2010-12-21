@@ -26,4 +26,5 @@ group :test do
   gem 'fuubar-cucumber'
   gem 'infinity_test'
   gem 'database_cleaner'
+  gem 'launchy'
 end
