@@ -1,11 +1,9 @@
-@import "reset.css"
-
 body {
   margin: 20px 0px 0px 0px;
   padding: 0;
   background: #FFFFFF;
-  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
   color: #000;
 }
 
@@ -64,7 +62,6 @@ a:hover {
   font-size: 3.2em;
   color: #000;
   font-weight: bold;
-  font-family: Georgia, 'Times New Roman', Times, serif;
   text-shadow: #bbb 2px 2px 3px;
 }
 
@@ -96,7 +93,6 @@ a:hover {
   font-size: 1.6em;
   color: #000;
   margin: 0 0 10px 0;
-  font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
 }
 
@@ -118,48 +114,46 @@ a:hover {
 
 /* Questions */
 
-#questions .question {
+.question {
   clear: both;
+  margin-bottom: 40px;
 }
 
-#questions .question .right {
+.question .right {
   float: right;
   width: 80%;
   padding: 0 0 0 5%;
 }
 
-#questions .question .left {
+.question .left {
   width: 15%;
   text-align: right;
 }
 
-#questions .question .right h2 {
+.question .right h2 {
   font-size: 1.6em;
   margin: 0 0 10px 0;
 }
 
-#questions .question .right p {
+.question .right p {
   margin: 0 0 10px 0;
   font-size: 16px;
 }
 
-#questions .question .left .nr {
+.question .left .nr {
   font-size: 1.6em;
   color: #bbb;
+  margin: 0 0 14px 0;
+}
+
+.question .left .avatar {
   margin: 0 0 5px 0;
 }
 
-#questions .question .left .posted {
-  font-size: 14px;
-  margin: 0 0 5px 0;
-}
-
-#questions .question .left .date {
-  font-size: 14px;
-}
-
-#questions .question .left .comments {
-  font-size: 14px;
+.question .info {
+  font-style: italic;
+  font-size: 0.8em;
+  float:right;
 }
 
 /* Wrapper */
@@ -237,7 +231,6 @@ a:hover {
   height: 37px;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   color: #888;
 }

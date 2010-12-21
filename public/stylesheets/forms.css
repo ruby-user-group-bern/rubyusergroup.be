@@ -33,7 +33,6 @@ abbr {
 }
 
 input {
-  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 14px;
 }
 
@@ -44,7 +43,6 @@ input.button {
   font-size: 14px;
   padding: 5px;
   color: #555;
-  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 input.string {
@@ -64,7 +62,6 @@ input.password {
 }
 
 textarea.text {
-  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 14px;
   padding: 2px 3px 3px;
   width: 400px;

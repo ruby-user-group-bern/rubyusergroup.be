@@ -3,14 +3,9 @@
     %h2
       %a= link_to question.title, question
     %p
-      = image_tag avatar_url(question.author)
       = question.content
+    %span.info= l question.created_at
   .left
     .nr #1
-    .posted
-      by
-      %a= question.author.email
-    .date= question.created_at
-    .comments
-      Comments
-      %a (64)
+    .avatar
+      = image_tag avatar_url(question.author)
