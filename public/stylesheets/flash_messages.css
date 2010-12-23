@@ -1,0 +1,20 @@
+/* Flash Messages */
+
+#flash_messages {
+  width: 660px;
+}
+
+#flash_messages .notice, .error, .alert {
+  padding: 10px 12px;
+  margin: 0px 0 10px 0;
+}
+
+#flash_messages .notice {
+  background-color: #ccffcc;
+  border: solid 1px #66cc66;
+}
+
+#flash_messages .error, .alert {
+  background-color: #ffcccc;
+  border: solid 1px #cc6666;
+}
