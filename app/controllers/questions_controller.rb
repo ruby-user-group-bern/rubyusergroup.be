@@ -13,4 +13,7 @@ class QuestionsController < InheritedResources::Base
     @question ||= current_user.questions.build params[:question]
   end
 
+  def collection
+    @questions ||= Question.unsolved.paginate(:page => params[:page], :per_page => 5)
+  end
 end
