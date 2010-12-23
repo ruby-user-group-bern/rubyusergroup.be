@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails'
 gem 'devise'
 gem 'cancan'
+gem "will_paginate", "~> 3.0.pre2"
 
 # Controllers
 gem 'inherited_resources'
