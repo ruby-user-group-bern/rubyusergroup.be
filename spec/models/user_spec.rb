@@ -6,6 +6,7 @@ describe User do
 
   describe "associations: " do
     it { should have_many(:questions) }
+    it { should have_many(:topics) }
   end
 
 end
