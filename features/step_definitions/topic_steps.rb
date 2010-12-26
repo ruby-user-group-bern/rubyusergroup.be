@@ -6,6 +6,12 @@ Given /^a topic named "([^"]*)" with (\d+) votes$/ do |topic, vote_count|
   end
 end
 
+Given /^I am the submitter of the topic "([^"]*)"$/ do |topic_title|
+  topic = Topic.find_by_title(topic_title)
+  topic.submitter = @user
+  topic.save
+end
+
 When /^I vote for the topic "([^"]*)"$/ do |topic|
   get_topics[topic].add_vote.should be_true
 end

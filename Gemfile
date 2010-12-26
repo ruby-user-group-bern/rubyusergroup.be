@@ -4,6 +4,7 @@ gem 'rails'
 gem 'inherited_resources'
 gem 'responders'
 gem 'devise'
+gem 'cancan'
 
 # Database
 gem 'sqlite3-ruby', :require => 'sqlite3'

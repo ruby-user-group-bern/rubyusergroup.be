@@ -9,4 +9,5 @@ class User < ActiveRecord::Base
 
   has_many :questions, :foreign_key => 'author_id'
   has_many :topics, :foreign_key => 'submitter_id'
+
 end
