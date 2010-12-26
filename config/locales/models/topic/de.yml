@@ -1,0 +1,7 @@
+de:
+  activerecord:
+    models:
+      topic: Thema
+    attributes:
+      topic:
+        title: Titel

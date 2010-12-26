@@ -1,0 +1,6 @@
+de:
+  activerecord:
+    models:
+      vote: Votum
+    attributes:
+      vote:

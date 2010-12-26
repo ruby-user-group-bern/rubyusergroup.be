@@ -3,10 +3,11 @@ Given /^I am not authenticated$/ do
 end
 
 Given /^I have one\s+user "([^\"]*)" with password "([^\"]*)" and login "([^\"]*)"$/ do |email, password, login|
-  User.new(:email => email,
-           :login => login,
-           :password => password,
-           :password_confirmation => password).save!
+  @user = User.new(:email => email,
+                   :login => login,
+                   :password => password,
+                   :password_confirmation => password)
+  @user.save!
 end
 
 Given /^I am a new, authenticated user$/ do

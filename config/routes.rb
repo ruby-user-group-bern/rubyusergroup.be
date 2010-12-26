@@ -5,6 +5,10 @@ RubyusergroupBe::Application.routes.draw do
     resources :answers
   end
 
+  resources :topics do
+    resources :votes
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
