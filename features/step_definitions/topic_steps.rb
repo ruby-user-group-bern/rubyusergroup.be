@@ -1,13 +1,32 @@
 # -*- coding: utf-8 -*-
+Given /^a topic named "([^"]*)" with (\d+) votes$/ do |topic, vote_count|
+  topic = Factory(:topic, :title => topic)
+  vote_count.to_i.times do
+    Factory(:vote, :topic => topic)
+  end
+end
+
+When /^I vote for the topic "([^"]*)"$/ do |topic|
+  get_topics[topic].add_vote.should be_true
+end
+
 When /I add a topic called "([^"]*)"/ do |topic|
   fill_in 'Titel', :with => topic
   When %{I press "Thema hinzufügen"}
 end
 
 Then /^I should see the topic "([^"]*)"$/ do |topic|
-  all('.topics li').map(&:plain_text).should include(topic)
+  get_topics.keys.should include(topic)
 end
 
 Then /^I should not see the topic "([^"]*)"$/ do |topic|
-  all('.topics li').map(&:plain_text).should_not include(topic)
+  get_topics.keys.should_not include(topic)
+end
+
+Then /^the topic "([^"]*)" should have (\d+) votes$/ do |topic, vote_count|
+  get_topics[topic][:votes].should == vote_count
+end
+
+Then /^I should not be able to vote for the topic "([^"]*)"$/ do |topic|
+  get_topics[topic].add_vote.should be_false
 end

@@ -1,3 +1,6 @@
 %ul.topics
   - for topic in topics
-    %li= topic.title
+    %li
+      %span.title= topic.title
+      %span.votes= topic.votes.count
+      = link_to t('views.vote.create'), topic_votes_path(topic), :method => :post, :class => 'vote_link'

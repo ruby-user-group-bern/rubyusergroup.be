@@ -6,6 +6,7 @@ describe Topic do
 
   describe "associations: " do
     it { should belong_to(:submitter) }
+    it { should have_many(:votes) }
   end
 
   describe "validations: " do
