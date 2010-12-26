@@ -4,13 +4,13 @@ class QuestionsController < InheritedResources::Base
 
   respond_to :html, :xml, :json
 
+  has_scope :tagged_with
+  has_scope :unsolved, :type => :boolean, :default => true
+
   protected
 
   def build_resource
     @question ||= current_user.questions.build params[:question]
   end
 
-  def collection
-    @questions ||= Question.unsolved
-  end
 end

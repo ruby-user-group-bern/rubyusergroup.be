@@ -1,10 +1,16 @@
 source 'http://rubygems.org'
 
 gem 'rails'
-gem 'inherited_resources'
-gem 'responders'
 gem 'devise'
 gem 'cancan'
+
+# Controllers
+gem 'inherited_resources'
+gem 'has_scope'
+gem 'responders'
+
+# Models
+gem 'acts-as-taggable-on'
 
 # Database
 gem 'sqlite3-ruby', :require => 'sqlite3'

@@ -28,6 +28,7 @@ GEM
       activemodel (= 3.0.3)
       activesupport (= 3.0.3)
     activesupport (3.0.3)
+    acts-as-taggable-on (2.0.6)
     arel (2.0.6)
     bcrypt-ruby (2.1.2)
     builder (2.1.2)
@@ -161,6 +162,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on
   cancan
   capybara
   cucumber-rails
@@ -171,6 +173,7 @@ DEPENDENCIES
   fuubar
   fuubar-cucumber
   haml
+  has_scope
   infinity_test
   inherited_resources
   launchy

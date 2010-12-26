@@ -1,5 +1,6 @@
 = simple_form_for question do |f|
   = f.input :title
+  = f.input :tag_list
   - if params[:action] == 'edit'
     = f.input :solved
   = f.input :content

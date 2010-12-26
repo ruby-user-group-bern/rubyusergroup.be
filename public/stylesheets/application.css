@@ -376,8 +376,13 @@ a:hover {
   color: #6B4A45;
 }
 
+/* Tag Cloud */
+#sidebar .tag-size1 { font-size: 0.6em; }
+#sidebar .tag-size2 { font-size: 0.8em; }
+#sidebar .tag-size3 { font-size: 1.0em; }
+#sidebar .tag-size4 { font-size: 1.2em; }
+
 /* Other Stuff */
 .clearfix {
   clear: both;
 }
-

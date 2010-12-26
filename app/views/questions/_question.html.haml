@@ -1,7 +1,7 @@
 .question
   .right
     %h2
-      %a= link_to question.title, question
+      = link_to question.title, question
     %p
       = raw question.content
     %span.info= l question.created_at

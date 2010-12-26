@@ -1,5 +1,7 @@
 module ApplicationHelper
 
+  include ActsAsTaggableOn::TagsHelper
+
   def avatar_url(user, options = {})
     opts = {:size => 100}.merge(options)
     gravatar_id = Digest::MD5.hexdigest(user.email.downcase)
