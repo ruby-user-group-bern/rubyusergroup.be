@@ -14,10 +14,10 @@ Feature: display tagged questions
   Scenario: list questions by tag
     Then I should see the following questions:
       | Title                           |
-      | getting started with ruby       |
-      | programming in ruby, the basics |
-      | testing with ruby               |
       | rspec2                          |
+      | testing with ruby               |
+      | programming in ruby, the basics |
+      | getting started with ruby       |
     When I follow "rails"
     Then I should see the following questions:
       | Title                           |
@@ -25,12 +25,12 @@ Feature: display tagged questions
     When I follow "rspec"
     Then I should see the following questions:
       | Title                           |
-      | testing with ruby               |
       | rspec2                          |
+      | testing with ruby               |
     When I follow "ruby"
     Then I should see the following questions:
       | Title                           |
-      | getting started with ruby       |
-      | programming in ruby, the basics |
-      | testing with ruby               |
       | rspec2                          |
+      | testing with ruby               |
+      | programming in ruby, the basics |
+      | getting started with ruby       |
