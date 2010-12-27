@@ -33,11 +33,11 @@ describe Question do
       end
 
       it "should return solved questions only" do
-        Question.solved.map(&:id).should == [@solved1.id, @solved2.id]
+        Question.solved.map(&:id).should == [@solved2.id, @solved1.id]
       end
 
       it "should return unsolved questions only" do
-        Question.unsolved.map(&:id).should == [@unsolved1.id, @unsolved2.id]
+        Question.unsolved.map(&:id).should == [@unsolved2.id, @unsolved1.id]
       end
 
     end

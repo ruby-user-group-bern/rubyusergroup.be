@@ -9,8 +9,8 @@ class Question < ActiveRecord::Base
   validates_presence_of :content
   validates_presence_of :author
 
-  scope :solved, where(:solved => true)
-  scope :unsolved, where(:solved => false)
+  scope :solved, where(:solved => true).order("created_at DESC")
+  scope :unsolved, where(:solved => false).order("created_at DESC")
 
   after_initialize :mark_as_unsolved
   def mark_as_unsolved
