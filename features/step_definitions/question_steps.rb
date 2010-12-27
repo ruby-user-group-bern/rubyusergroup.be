@@ -6,3 +6,8 @@ Then /^I should see the following questions:$/ do |question_table|
   end
   question_table.diff! actual_questions
 end
+
+Given /^the user "([^"]*)" has an existing question titled "([^"]*)"$/ do |email, title|
+  user = User.find_by_email(email)
+  Factory.create(:question, :title => title, :author => user)
+end
