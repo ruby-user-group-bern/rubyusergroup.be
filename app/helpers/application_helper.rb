@@ -8,4 +8,8 @@ module ApplicationHelper
     "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{opts[:size]}"
   end
 
+  def format_date(date, format=:short)
+    localize date, :format => format
+  end
+
 end
