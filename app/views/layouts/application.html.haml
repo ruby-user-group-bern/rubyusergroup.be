@@ -31,10 +31,10 @@
           #menu
             - if user_signed_in?
               %ul
-                %li.current_page_item
+                %li
                   = link_to "Home", root_path
                 %li
-                  = link_to "Neue Frage", new_question_path
+                  = link_to "Fragen", questions_path
       #page
         #content
           #flash_messages

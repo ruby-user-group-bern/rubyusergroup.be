@@ -1,11 +1,15 @@
 .question
   .right
     %h2
-      = link_to question.title, question
+      %a= link_to question.title, question
+    %span.info
+      <strong>Erstellt am:</strong>
+      =format_date question.created_at
     %p
-      = raw question.content
-    %span.info= l question.created_at
+      = raw truncate(question.content, :length => 250)
+      = link_to "mehr", question
   .left
-    .nr #1
+    .nr
+      = number_for(question)
     .avatar
       = image_tag avatar_url(question.author)

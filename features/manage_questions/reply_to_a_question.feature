@@ -8,7 +8,7 @@ Feature: submit a reply to a question
   Scenario: add a reply to an existing question
     Given I am on the home page
     When I follow "What is your name?"
-    And I fill in "Antwort" with "Hans Peter"
+    And I fill in "answer_content" with "Hans Peter"
     And I press "Antworten"
     Then I should see the flash notice "Antwort wurde erfolgreich erstellt."
     And I should see "What is your name?"

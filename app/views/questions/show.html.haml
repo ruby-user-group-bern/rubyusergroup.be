@@ -1,7 +1,20 @@
-%h2= @question.title
-%p= raw @question.content
+.question
+  %h2
+    = @question.title
+    - if @question.author_id == current_user.id
+      %span.actions
+        = link_to "Bearbeiten", edit_question_path(@question)
+        |
+        = link_to "Löschen", @question, :method => :delete, :confirm => "Diese Frage wirklich löschen?"
 
-- for answer in @question.answers
-  - unless answer.new_record?
-    = render 'answers/answer', :answer => answer
-= render 'answers/form', :question => @question
+  %span.info
+    <strong>Erstellt am:</strong>
+    =format_date @question.created_at
+  %p= raw @question.content
+
+#answers
+  - for answer in @question.answers
+    - unless answer.new_record?
+      = render 'answers/answer', :answer => answer
+
+  = render 'answers/form', :question => @question

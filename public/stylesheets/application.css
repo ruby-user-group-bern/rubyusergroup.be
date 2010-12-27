@@ -114,6 +114,10 @@ a:hover {
 
 /* Questions */
 
+#questions {
+
+}
+
 .question {
   clear: both;
   margin-bottom: 40px;
@@ -130,18 +134,24 @@ a:hover {
   text-align: right;
 }
 
-.question .right h2 {
+.question h2 {
   font-size: 1.6em;
-  margin: 0 0 10px 0;
+  margin: 0 0 0 0;
 }
 
-.question .right p {
-  margin: 0 0 10px 0;
+.question span.actions {
+  font-size: 14px;
+
+}
+
+.question p {
+  margin: 10px 0 10px 0;
   font-size: 16px;
 }
 
 .question .left .nr {
   font-size: 1.6em;
+  font-weight: bold;
   color: #bbb;
   margin: 0 0 14px 0;
 }
@@ -150,19 +160,41 @@ a:hover {
   margin: 0 0 5px 0;
 }
 
-.info {
+.question .info {
   font-style: italic;
   font-size: 0.8em;
-  float:right;
 }
+
+#answers {}
 
 .answer {
   clear: both;
-  margin-bottom: 14px;
 }
 
 .answer .left {
-  float:left;
+  width: 65px;
+  float: left;
+  margin: 0 0 20px 0;
+}
+
+.answer .right {
+  width: 560px;
+  float: right;
+  padding: 0;
+  border-bottom: 1px dotted #bbb;
+  margin: 0 0 20px 0;
+}
+
+.answer .right .author {
+  font-weight: bold;
+}
+
+.answer .right .date {
+  font-size: 0.8em;
+}
+
+.answer .right p {
+  padding: 10px 0;
 }
 
 /* Wrapper */
