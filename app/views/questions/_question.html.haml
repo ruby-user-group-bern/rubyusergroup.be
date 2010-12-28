@@ -4,7 +4,7 @@
       %a= link_to question.title, question
     %span.info
       %strong Erstellt am:
-      =format_date question.created_at
+      = l question.created_at
     %p
       = raw truncate(question.content, :length => 250)
       = link_to "mehr", question
