@@ -4,5 +4,5 @@
       %h3= topic.title
       .vote_badge
         %span.vote_count= topic.votes.count
-        - if can? :vote, topic
+        - if can?(:vote, topic)
           = link_to 'vote +1', topic_votes_path(topic), :method => :post, :class => 'vote_link'

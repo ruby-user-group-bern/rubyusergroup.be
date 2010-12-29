@@ -20,9 +20,11 @@
     =l @question.created_at
   %p= raw @question.content
 
-#answers
-  - for answer in @question.answers
-    - unless answer.new_record?
-      = render 'answers/answer', :answer => answer
+- if can? :read, @question => Answer
+  #answers
+    - for answer in @question.answers
+      - unless answer.new_record?
+        = render 'answers/answer', :answer => answer
 
-  = render 'answers/form', :question => @question
+  - if can? :create, @question => Answer
+    = render 'answers/form', :question => @question

@@ -1,5 +1,6 @@
 #questions
-  = link_to "Neue Frage Erstellen", new_question_path, :class => 'button'
+  - if can? :create, Question
+    = link_to "Neue Frage Erstellen", new_question_path, :class => 'button'
   = render @questions
 
 = will_paginate @questions

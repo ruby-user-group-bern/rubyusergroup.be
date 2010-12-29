@@ -33,8 +33,9 @@
               %ul
                 %li
                   = link_to "Home", root_path
-                %li
-                  = link_to "Fragen", questions_path
+                - if can? :read, Question
+                  %li
+                    = link_to "Fragen", questions_path
       #page
         #content
           #flash_messages

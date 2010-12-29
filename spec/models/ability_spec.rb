@@ -17,7 +17,24 @@ describe Ability do
     end
   end
 
-  describe "vote for topics" do
+  describe "answers" do
+    let(:answer) { Factory(:question) }
+    it { should be_able_to(:create, Answer) }
+    it { should be_able_to(:read, Answer) }
+    it { should_not be_able_to(:manage, answer) }
+
+    context "author" do
+      let(:answer) { Factory(:answer, :author => current_user) }
+      it { should be_able_to(:manage, answer) }
+    end
+  end
+
+  describe "topics" do
+    it { should be_able_to(:create, Topic) }
+    it { should be_able_to(:read, Topic) }
+  end
+
+  describe "votes" do
     let(:submitter) { Factory(:user) }
     let(:topic) { Factory(:topic, :submitter => submitter) }
 
@@ -25,6 +42,7 @@ describe Ability do
       topic.stub!(:voted_by?) {false}
     end
 
+    it { should be_able_to(:create, Vote) }
 
     context "the owner" do
       let(:submitter) { current_user }
