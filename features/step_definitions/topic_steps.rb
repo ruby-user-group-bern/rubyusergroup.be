@@ -36,3 +36,7 @@ end
 Then /^I should not be able to vote for the topic "([^"]*)"$/ do |topic|
   get_topics[topic].add_vote.should be_false
 end
+
+Then /^I should see the following topics:$/ do |topic_table|
+  get_topics.keys.should == topic_table.raw.flatten
+end

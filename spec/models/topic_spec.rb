@@ -14,6 +14,23 @@ describe Topic do
     it { should validate_presence_of(:submitter) }
   end
 
+  describe "scopes: " do
+    describe "#top_5" do
+      before(:each) do
+        @one = Factory(:topic)
+        @two = Factory(:topic)
+        @three = Factory(:topic)
+        @four = Factory(:topic)
+        @five = Factory(:topic)
+        @six = Factory(:topic)
+      end
+
+      it "should return the latest five topics" do
+        Topic.top_5.map(&:id).should == [@six.id, @five.id, @four.id, @three.id, @two.id]
+      end
+    end
+  end
+
   describe "#voted_by?" do
     subject { Factory(:topic) }
     let(:current_user) { Factory(:user) }
