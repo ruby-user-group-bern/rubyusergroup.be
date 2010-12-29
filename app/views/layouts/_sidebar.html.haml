@@ -1,5 +1,5 @@
-%ul
-  %li>
+%ul.sidebar-elements
+  %li
     %h2= t('views.topic.title')
     = render '/topics/list', :topics => Topic.all
     = render '/topics/form', :topic => Topic.new

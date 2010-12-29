@@ -299,40 +299,40 @@ a:hover {
   padding: 0px 0px 0px 0px;
 }
 
-#sidebar ul {
+#sidebar ul.sidebar-elements {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-#sidebar li {
+#sidebar ul.sidebar-elements li {
   margin: 0px 0px 0px 20px;
   padding: 0;
 }
 
-#sidebar li ul {
-  margin: 0px;
-  padding-bottom: 30px;
-}
+/* #sidebar li ul { */
+/*   margin: 0px; */
+/*   padding-bottom: 30px; */
+/* } */
 
-#sidebar li li {
-  line-height: 35px;
-  border-bottom: 1px solid #BBBBBB;
-  border-left: none;
-  text-align: left;
-}
+/* #sidebar li li { */
+/*   line-height: 35px; */
+/*   border-bottom: 1px solid #BBBBBB; */
+/*   border-left: none; */
+/*   text-align: left; */
+/* } */
 
-#sidebar li li span {
-  display: block;
-  margin-top: -20px;
-  padding: 0;
-  font-size: 11px;
-  font-style: italic;
-}
+/* #sidebar li li span { */
+/*   display: block; */
+/*   margin-top: -20px; */
+/*   padding: 0; */
+/*   font-size: 11px; */
+/*   font-style: italic; */
+/* } */
 
-#sidebar li li a {
-  padding: 0px 0px 0px 20px;
-}
+/* #sidebar li li a { */
+/*   padding: 0px 0px 0px 20px; */
+/* } */
 
 #sidebar h2 {
   margin: 0px 0px 5px 0px;
@@ -417,4 +417,37 @@ a:hover {
 /* Other Stuff */
 .clearfix {
   clear: both;
+}
+
+/* Topics */
+#topic_list li {
+  height: 65px;
+  clear:both;
+}
+
+#topic_list h3 {
+  width: 180px;
+  float: right;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+
+.vote_badge {
+  border: 2px #888 solid;
+  width: 50px;
+  padding: 5px;
+  height: 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.vote_count {
+  display: block;
+  font-weight: bold;
+  font-size: 1.5em;
+  border-bottom: 2px #888 dashed;
+}
+
+.vote_link {
+
 }

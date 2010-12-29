@@ -11,12 +11,12 @@ module UiHelpers
   end
 
   def get_topics
-    all('.topics li').inject({}) do |topics, topic_node|
-      title = topic_node.find('.title').plain_text
+    all('#topic_list li').inject({}) do |topics, topic_node|
+      title = topic_node.find('h3').plain_text
       topic_data = {
         :title => title,
         :node => topic_node,
-        :votes => topic_node.find('.votes').plain_text,
+        :votes => topic_node.find('.vote_count').plain_text,
       }
 
       def topic_data.add_vote
