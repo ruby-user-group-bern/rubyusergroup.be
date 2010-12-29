@@ -7,6 +7,11 @@ Then /^I should see the following questions:$/ do |question_table|
   question_table.diff! actual_questions
 end
 
+Given /^I have a question titled "([^"]*)"$/ do |question_title|
+  raise "you need to be logged in to have questions" unless @user
+  @question = Factory.create(:question, :title => question_title, :author => @user)
+end
+
 Given /^the user "([^"]*)" has an existing question titled "([^"]*)"$/ do |email, title|
   user = User.find_by_email(email)
   Factory.create(:question, :title => title, :author => user)

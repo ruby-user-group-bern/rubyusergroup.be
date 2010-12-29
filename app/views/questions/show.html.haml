@@ -3,9 +3,17 @@
     = @question.title
     - if @question.author_id == current_user.id
       %span.actions
-        = link_to "Bearbeiten", edit_question_path(@question)
-        |
-        = link_to "Löschen", @question, :method => :delete, :confirm => "Diese Frage wirklich löschen?"
+        - if can? :update, @question
+          - if @question.solved?
+            = link_to "Als ungelöst markieren", question_path(@question, :question => {:solved => false}), :method => :put
+          - else
+            = link_to "Als gelöst markieren", question_path(@question, :question => {:solved => true}), :method => :put
+
+          |
+          = link_to "Bearbeiten", edit_question_path(@question)
+        - if can? :destroy, @question
+          |
+          = link_to "Löschen", @question, :method => :delete, :confirm => "Diese Frage wirklich löschen?"
 
   %span.info
     <strong>Erstellt am:</strong>

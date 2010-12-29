@@ -10,6 +10,8 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+    when /that questions page/
+      question_path(@question)
     when /login page/
       '/users/sign_in'
 

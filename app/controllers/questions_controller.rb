@@ -5,7 +5,7 @@ class QuestionsController < InheritedResources::Base
   respond_to :html, :xml, :json
 
   has_scope :tagged_with
-  has_scope :unsolved, :type => :boolean, :default => true
+  has_scope :unsolved, :type => :boolean, :default => true, :only => [:index]
 
   protected
 
