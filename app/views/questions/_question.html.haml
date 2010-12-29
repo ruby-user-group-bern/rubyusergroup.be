@@ -6,8 +6,8 @@
       %strong Erstellt am:
       = l question.created_at
     %p
-      = raw truncate(question.content, :length => 250)
-      = link_to "mehr", question
+      - omission = "... #{link_to("mehr", question)}"
+      = raw truncate(question.content, :length => 250, :omission => omission)
   .left
     .nr
       = number_for(question)
