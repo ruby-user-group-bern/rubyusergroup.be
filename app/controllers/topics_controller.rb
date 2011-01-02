@@ -5,9 +5,11 @@ class TopicsController < InheritedResources::Base
 
   respond_to :html, :xml, :json
 
+  has_scope :ordered, :type => :boolean, :default => true
+
   def create
     create! do |success, failure|
-      success.html { redirect_to root_path }
+      success.html { redirect_to :back }
       failure.html do
         flash[:alert] = resource.errors.full_messages.first
         redirect_to root_path
@@ -20,5 +22,10 @@ class TopicsController < InheritedResources::Base
   def build_resource
     @topic ||= Topic.new params[:topic].merge(:submitter => current_user)
   end
+
+  def collection
+    @topics ||= end_of_association_chain.paginate(:page => params[:page], :per_page => 10)
+  end
+
 
 end

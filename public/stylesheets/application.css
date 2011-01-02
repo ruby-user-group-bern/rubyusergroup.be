@@ -118,49 +118,49 @@ a:hover {
 
 }
 
-.question {
+.question, .topic {
   clear: both;
   margin-bottom: 40px;
 }
 
-.question .right {
+.question .right, .topic .right {
   float: right;
   width: 80%;
   padding: 0 0 0 5%;
 }
 
-.question .left {
+.question .left, .topic .left {
   width: 15%;
   text-align: right;
 }
 
-.question h2 {
+.question h2, .topic .h2 {
   font-size: 1.6em;
   margin: 0 0 0 0;
 }
 
-.question span.actions {
+.question span.actions, .topic span.actions {
   font-size: 14px;
 
 }
 
-.question p {
+.question p, .topic .voters {
   margin: 10px 0 10px 0;
   font-size: 16px;
 }
 
-.question .left .nr {
+.question .left .nr, .topic .left .nr {
   font-size: 1.6em;
   font-weight: bold;
   color: #bbb;
   margin: 0 0 14px 0;
 }
 
-.question .left .avatar {
+.question .avatar, .topic .avatar {
   margin: 0 0 5px 0;
 }
 
-.question .info {
+.question .info, .topic .info {
   font-style: italic;
   font-size: 0.8em;
 }
@@ -446,8 +446,4 @@ a:hover {
   font-weight: bold;
   font-size: 1.5em;
   border-bottom: 2px #888 dashed;
-}
-
-.vote_link {
-
 }
