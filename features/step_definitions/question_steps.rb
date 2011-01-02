@@ -16,3 +16,7 @@ Given /^the user "([^"]*)" has an existing question titled "([^"]*)"$/ do |email
   user = User.find_by_email(email)
   Factory.create(:question, :title => title, :author => user)
 end
+
+Then /^I should have no question titled "([^"]*)"$/ do |title|
+  @user.questions.where(:title => title).should be_blank
+end
