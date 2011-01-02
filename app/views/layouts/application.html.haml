@@ -42,8 +42,8 @@
             - flash.each do |type, message|
               %div{:class => "flash #{type}"}= message
           = yield
-        #sidebar
-          - if user_signed_in?
+        - if user_signed_in?
+          #sidebar
             = render '/layouts/sidebar'
         .clearfix
       #footer
