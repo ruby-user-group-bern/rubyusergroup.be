@@ -88,3 +88,21 @@ textarea.text {
   color: #555;
   text-decoration: none;
 }
+
+.hint {
+  margin-left: 150px;
+  display: block;
+  font-size: 0.7em;
+}
+
+/* Errors */
+.field_with_errors .error {
+  font-size: 0.7em;
+  margin-left: 150px;
+  color: #cc6666;
+}
+
+.field_with_errors input {
+  background-color: #ffcccc;
+  border: solid 1px #cc6666;
+}

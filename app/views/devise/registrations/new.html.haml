@@ -2,6 +2,7 @@
 = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
   = devise_error_messages!
   = f.input :email
+  = f.input :github_username
   = f.input :password
   = f.input :password_confirmation
   = f.button :submit, "Registrieren"

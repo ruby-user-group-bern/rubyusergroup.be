@@ -1,7 +1,10 @@
 .user.container
   .right
     %h2
-      = user
+      - if user.github_username.present?
+        = link_to user.github_username, github_url(user.github_username)
+      - else
+        = user
     %span.info
       %strong Erstellt am:
       = l user.created_at

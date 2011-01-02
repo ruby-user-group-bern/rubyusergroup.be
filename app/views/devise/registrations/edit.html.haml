@@ -1,27 +1,13 @@
-%h2
-  Edit #{resource_name.to_s.humanize}
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
-  = devise_error_messages!
-  %p
-    = f.label :email
-    %br/
-    = f.text_field :email
-  %p
-    = f.label :password
-    %i (leave blank if you don't want to change it)
-    %br/
-    = f.password_field :password
-  %p
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation
-  %p
-    = f.label :current_password
-    %i (we need your current password to confirm your changes)
-    %br/
-    = f.password_field :current_password
-  %p= f.submit "Update"
-%h3 Cancel my account
-%p
-  Unhappy? #{link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete}.
-= link_to "Back", :back
+%h2 Benutzerprofil
+= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+  = f.input :email
+  = f.input :github_username
+  = f.input :password, :hint => 'Du kannst das Passwort Feld leer lassen, wenn du dein Passwort nicht ändern möchtest.'
+  = f.input :password_confirmation
+  = f.input :current_password, :hint => "Du musst dein aktuelles Passwort eingeben um die Änderungen speichern zu können"
+  = f.button :submit, "Speichern"
+
+-# %h3 Cancel my account
+-# %p
+-#   Unhappy? #{link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete}.
+-# = link_to "Back", :back
