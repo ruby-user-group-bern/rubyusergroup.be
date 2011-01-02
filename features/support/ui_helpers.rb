@@ -43,11 +43,11 @@ module UiHelpers
 
   def get_topics_from_list
     all('#topics .topic').inject({}) do |topics, topic_node|
-      title = topic_node.find('h2').plain_text
+      title = topic_node.find(:xpath, './/h2/text()').plain_text
       topic_data = {
         :title => title,
         :node => topic_node,
-        :votes => topic_node.all('.voters img').count,
+        :votes => topic_node.all('.voters img').count.to_s,
       }
 
       def topic_data.add_vote

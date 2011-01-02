@@ -1,7 +1,7 @@
 .question
   .right
     %h2
-      %a= link_to question.title, question
+      = link_to question.title, question
       = render 'actions', :question => question
     %span.info
       %strong Erstellt am:

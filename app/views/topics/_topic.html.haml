@@ -1,6 +1,8 @@
 .topic
   .right
-    %h2= topic
+    %h2
+      = topic
+      = render 'actions', :topic => topic
     %span.info
       %strong Erstellt am:
       = l topic.created_at

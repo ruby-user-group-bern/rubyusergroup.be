@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+Given /^I have submitted a topic named "([^"]*)"$/ do |topic_title|
+  raise "you need to be logged in to submit topics" unless @user
+  @topic = Factory.create(:topic, :title => topic_title, :submitter => @user)
+end
+
 Given /^a topic named "([^"]*)" with (\d+) votes$/ do |topic, vote_count|
   topic = Factory(:topic, :title => topic)
   vote_count.to_i.times do
