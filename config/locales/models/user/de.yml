@@ -9,3 +9,4 @@ de:
         password_confirmation: Passwort bestätigen
         current_password: Aktuelles Passwort
         github_username: GitHub Benutzer
+        receive_jabber_notifications: Jabber Nachrichten

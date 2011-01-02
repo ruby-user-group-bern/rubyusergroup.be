@@ -17,4 +17,12 @@ class Question < ActiveRecord::Base
     self.solved ||= false
   end
 
+  include Rugb::Jabber
+
+  notify :after_create, :jabber_text
+
+  def jabber_text
+    "Frage von #{author}:\n\n#{title}\n#{content}"
+  end
+
 end

@@ -15,4 +15,19 @@ describe Answer do
     it { should validate_presence_of(:content) }
   end
 
+  describe "formatting: " do
+    describe "#jabber_text" do
+      subject do
+        answer = Answer.new
+        answer.stub! :author => 'Meister Eder', :content => 'Wo bist du?'
+        answer.stub_chain :question, :title => 'Um was geht es hier?'
+        answer
+      end
+
+      it "should build a jabber friendly representation" do
+        subject.jabber_text.should == "Antwort auf die Frage 'Um was geht es hier?':\n\nMeister Eder sagt:\nWo bist du?"
+      end
+    end
+  end
+
 end

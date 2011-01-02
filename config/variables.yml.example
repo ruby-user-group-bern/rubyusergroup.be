@@ -1,0 +1,3 @@
+jabber:
+  jid: "some.valid@jabber.id"
+  password: "top-secret-password"

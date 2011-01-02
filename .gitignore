@@ -1,5 +1,6 @@
 .bundle
 
+config/variables.yml
 config/database.yml
 
 db/*.sqlite3

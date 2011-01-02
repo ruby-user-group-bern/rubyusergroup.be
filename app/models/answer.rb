@@ -7,4 +7,13 @@ class Answer < ActiveRecord::Base
   validates_presence_of :question
   validates_presence_of :content
 
+
+  include Rugb::Jabber
+
+  notify :after_create, :jabber_text
+
+  def jabber_text
+    "Antwort auf die Frage '#{question.title}':\n\n#{author} sagt:\n#{content}"
+  end
+
 end

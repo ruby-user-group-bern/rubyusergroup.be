@@ -23,6 +23,22 @@ describe Question do
     end
   end
 
+  describe "formatting: " do
+    subject do
+      question = Question.new
+      question.stub!(:author => 'Heinrich Henne',
+                     :title => 'Titel?',
+                     :content => 'Inhalt')
+      question
+    end
+
+    describe "#jabber_text" do
+      it "should build a jabber friendly message" do
+        subject.jabber_text.should == "Frage von Heinrich Henne:\n\nTitel?\nInhalt"
+      end
+    end
+  end
+
   describe "scopes: " do
     describe "#solved, #unsolved" do
       before(:each) do

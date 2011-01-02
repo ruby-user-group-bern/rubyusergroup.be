@@ -1,11 +1,5 @@
-.question
-  %h2
-    = @question.title
-    = render 'actions', :question => @question
-  %span.info
-    <strong>Erstellt am:</strong>
-    =l @question.created_at
-  %p= raw @question.content
+.question.container
+  = render @question
 
 - if can? :read, @question => Answer
   #answers

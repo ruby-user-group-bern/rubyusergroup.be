@@ -2,6 +2,7 @@
 = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
   = f.input :email
   = f.input :github_username
+  = f.input :receive_jabber_notifications
   = f.input :password, :hint => 'Du kannst das Passwort Feld leer lassen, wenn du dein Passwort nicht ändern möchtest.'
   = f.input :password_confirmation
   = f.input :current_password, :hint => "Du musst dein aktuelles Passwort eingeben um die Änderungen speichern zu können"
