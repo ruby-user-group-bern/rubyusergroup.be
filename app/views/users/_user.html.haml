@@ -1,0 +1,20 @@
+.user.container
+  .right
+    %h2
+      = user
+    %span.info
+      %strong Erstellt am:
+      = l user.created_at
+    %dl.content.info
+      %dt Gestellte Fragen
+      %dd= user.questions.count
+      %dt Geschriebene Antworten
+      %dd= user.answers.count
+      %dt Eingereichte Themen
+      %dd= user.topics.count
+  .left
+    .nr
+      = number_for(user)
+    .avatar
+      = image_tag avatar_url(user)
+

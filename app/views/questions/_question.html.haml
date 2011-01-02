@@ -1,4 +1,4 @@
-.question
+.question.container
   .right
     %h2
       = link_to question.title, question
@@ -6,7 +6,7 @@
     %span.info
       %strong Erstellt am:
       = l question.created_at
-    %p
+    %p.content
       - omission = "... #{link_to("mehr", question)}"
       = raw truncate(question.content, :length => 250, :omission => omission)
   .left

@@ -118,54 +118,73 @@ a:hover {
 
 }
 
-.question, .topic {
+.container {
   clear: both;
   margin-bottom: 40px;
 }
 
-.question .right, .topic .right {
+.container .right {
   float: right;
   width: 80%;
   padding: 0 0 0 5%;
 }
 
-.question .left, .topic .left {
+.container .left {
   width: 15%;
   text-align: right;
 }
 
-.question h2, .topic .h2 {
+.container h2 {
   font-size: 1.6em;
   margin: 0 0 0 0;
 }
 
-.question span.actions, .topic span.actions {
+.container span.actions {
   font-size: 14px;
 
 }
 
-.question p, .topic .voters {
+.container .content {
   margin: 10px 0 10px 0;
   font-size: 16px;
 }
 
-.question .left .nr, .topic .left .nr {
+.container .left .nr {
   font-size: 1.6em;
   font-weight: bold;
   color: #bbb;
   margin: 0 0 14px 0;
 }
 
-.question .avatar, .topic .avatar {
+.container .avatar {
   margin: 0 0 5px 0;
 }
 
-.question .info, .topic .info {
+.container .info {
   font-style: italic;
   font-size: 0.8em;
 }
 
-#answers {}
+.container dl {
+  padding: 0.5em;
+}
+
+.container dt {
+  float: left;
+  clear: left;
+  width: 170px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.container dt:after {
+  content: ":";
+}
+
+.container dd {
+  margin: 0 0 0 180px;
+  padding: 0 0 0.5em 0;
+}
 
 .answer {
   clear: both;

@@ -39,6 +39,9 @@
                 - if can? :read, Topic
                   %li
                     = link_to "Themen", topics_path
+                - if can? :read, User
+                  %li
+                    = link_to "Mitglieder", users_path
 
       #page
         #content

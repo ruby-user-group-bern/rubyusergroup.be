@@ -1,4 +1,4 @@
-.topic
+.topic.container
   .right
     %h2
       = topic
@@ -6,7 +6,7 @@
     %span.info
       %strong Erstellt am:
       = l topic.created_at
-    .voters
+    .voters.content
       - topic.votes.each do |vote|
         = image_tag avatar_url(vote.voter, :size => 50)
   .left

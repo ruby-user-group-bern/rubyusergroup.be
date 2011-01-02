@@ -8,6 +8,11 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
 
   has_many :questions, :foreign_key => 'author_id'
+  has_many :answers, :foreign_key => 'author_id'
   has_many :topics, :foreign_key => 'submitter_id'
+
+  def to_s
+    email.gsub(/@.+/, '')
+  end
 
 end

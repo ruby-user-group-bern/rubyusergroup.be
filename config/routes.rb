@@ -1,4 +1,6 @@
 RubyusergroupBe::Application.routes.draw do
+  resources :users, :only => :index
+
   devise_for :users
 
   resources :questions do
