@@ -14,6 +14,13 @@ describe Topic do
     it { should validate_presence_of(:submitter) }
   end
 
+  describe "formatting: " do
+    subject { Factory.build(:topic, :title => 'Cukeing it right') }
+    it "should use the title as string representation" do
+      subject.to_s.should == 'Cukeing it right'
+    end
+  end
+
   describe "scopes: " do
     describe "#top_5" do
       before(:each) do

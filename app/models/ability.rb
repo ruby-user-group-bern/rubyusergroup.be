@@ -14,6 +14,10 @@ class Ability
       answer.author == user
     end
 
+    can :destroy, Topic do |topic|
+      topic.submitter == user
+    end
+
     can :create, Vote
     can :create, Topic
     can :create, Answer

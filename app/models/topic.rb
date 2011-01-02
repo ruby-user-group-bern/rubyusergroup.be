@@ -6,10 +6,15 @@ class Topic < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :submitter
 
-  scope :top_5, limit(5).order('created_at DESC')
+  scope :ordered, order('created_at DESC')
+  scope :top_5, limit(5).ordered
 
   def voted_by?(user)
     votes.where(:voter_id => user.id).exists?
+  end
+
+  def to_s
+    title
   end
 
 end

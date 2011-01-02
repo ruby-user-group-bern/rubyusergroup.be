@@ -18,20 +18,28 @@ describe Ability do
   end
 
   describe "answers" do
-    let(:answer) { Factory(:question) }
+    let(:answer) { Factory.build(:question) }
     it { should be_able_to(:create, Answer) }
     it { should be_able_to(:read, Answer) }
     it { should_not be_able_to(:manage, answer) }
 
     context "author" do
-      let(:answer) { Factory(:answer, :author => current_user) }
+      let(:answer) { Factory.build(:answer, :author => current_user) }
       it { should be_able_to(:manage, answer) }
     end
   end
 
   describe "topics" do
+    let(:topic) { Factory.build(:topic) }
     it { should be_able_to(:create, Topic) }
     it { should be_able_to(:read, Topic) }
+    it { should_not be_able_to(:destroy, topic) }
+
+    context "submitter" do
+      let(:topic) { Factory.build(:topic, :submitter => current_user) }
+
+      it { should be_able_to(:destroy, topic) }
+    end
   end
 
   describe "votes" do

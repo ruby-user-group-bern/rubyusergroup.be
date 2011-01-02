@@ -36,6 +36,10 @@
                 - if can? :read, Question
                   %li
                     = link_to "Fragen", questions_path
+                - if can? :read, Topic
+                  %li
+                    = link_to "Themen", topics_path
+
       #page
         #content
           #flash_messages
@@ -44,7 +48,8 @@
           = yield
         - if user_signed_in?
           #sidebar
-            = render '/layouts/sidebar'
+            %ul.sidebar-elements
+              = render_sidebar
         .clearfix
       #footer
         %p Copyright (c) 2010 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/"> CSS Templates</a>.

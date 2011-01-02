@@ -1,0 +1,5 @@
+%span.actions
+  - if can?(:vote, topic)
+    = link_to 'vote +1', topic_votes_path(topic), :method => :post, :class => 'vote_link'
+  - if can? :destroy, topic
+    = link_to "Löschen", topic, :method => :delete, :confirm => "Dieses Thema wirklich löschen?"

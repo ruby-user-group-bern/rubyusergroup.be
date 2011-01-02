@@ -8,4 +8,10 @@ module ApplicationHelper
     "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{opts[:size]}"
   end
 
+  def render_sidebar
+    render :partial => "/#{params[:controller]}/sidebar"
+  rescue ActionView::MissingTemplate
+    ''
+  end
+
 end
