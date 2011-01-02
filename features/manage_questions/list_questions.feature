@@ -1,4 +1,3 @@
-@question
 Feature: list questions
 
   Background:

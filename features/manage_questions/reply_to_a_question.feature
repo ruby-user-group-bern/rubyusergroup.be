@@ -1,4 +1,3 @@
-@question @answer
 Feature: submit a reply to a question
 
   Background:

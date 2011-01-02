@@ -1,4 +1,3 @@
-@topic
 Feature: submit a topic
 
   Background:

@@ -4,7 +4,6 @@ Feature: Homepage
     When I go to the home page
     Then I should be on the login page
 
-  @wip
   Scenario: guest users should not see the sidebar
     When I go to the home page
     Then I should not see the sidebar

@@ -1,4 +1,3 @@
-@question
 Feature: display tagged questions
 
   Background:

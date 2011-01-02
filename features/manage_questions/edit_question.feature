@@ -1,4 +1,3 @@
-@question @edit
 Feature: edit a exisiting question
 
   Background:

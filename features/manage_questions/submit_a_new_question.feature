@@ -1,4 +1,3 @@
-@question
 Feature: submit a question
 
   Background:

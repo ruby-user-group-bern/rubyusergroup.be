@@ -1,4 +1,3 @@
-@topic
 Feature: vote an existing topic
 
   Background:

@@ -1,4 +1,3 @@
-@authentication
 Feature: sign in
 
   Background:
