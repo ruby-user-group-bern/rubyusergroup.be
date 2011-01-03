@@ -96,16 +96,6 @@ a:hover {
   font-weight: bold;
 }
 
-#content h2 a {
-  color: #000;
-  text-decoration: underline;
-}
-
-
-#content h2 a:hover {
-  color: #000;
-  text-decoration: none;
-}
 #content p {
   line-height: 20px;
   color: #555;
@@ -114,39 +104,51 @@ a:hover {
 
 /* Questions */
 
-#questions {
 
-}
+
+/* Container */
 
 .container {
   clear: both;
   margin-bottom: 40px;
+  min-height: 100px;
+
 }
 
 .container .right {
   float: right;
-  width: 80%;
-  padding: 0 0 0 5%;
+  width: 600px;
+  padding: 0 0 0 5px;
 }
 
 .container .left {
-  width: 15%;
   text-align: right;
+  width: 50px;
+  margin: 0 15px 0 0;
 }
 
 .container h2 {
   font-size: 1.6em;
   margin: 0 0 0 0;
+  color: #000;
+}
+
+.container h2 a {
+  color: #000;
 }
 
 .container span.actions {
   font-size: 14px;
+}
 
+.container span.actions a {
+  font-size: 14px;
+  color: #ff0000;
 }
 
 .container .content {
-  margin: 10px 0 10px 0;
   font-size: 16px;
+  margin: 10px 0 10px 0;
 }
 
 .container .left .nr {
@@ -186,35 +188,33 @@ a:hover {
   padding: 0 0 0.5em 0;
 }
 
-.answer {
-  clear: both;
-}
+/* Pagination */
 
-.answer .left {
-  width: 65px;
-  float: left;
-  margin: 0 0 20px 0;
+.pagination { margin: 0 0 0 60px; }
+
+/* Answers */
+
+.answer { clear: both; }
+.answer .left { float: left; margin: 10px 0 20px 60px; }
+
+.answer hr {
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #fff;
+  width: 598px;
+  margin: 0 0 5px 60px;
+  padding: 0;
 }
 
 .answer .right {
-  width: 560px;
   float: right;
+  width: 558px;
   padding: 0;
-  border-bottom: 1px dotted #bbb;
-  margin: 0 0 20px 0;
+  margin: 10px 0 0 10px;
 }
 
-.answer .right .author {
-  font-weight: bold;
-}
-
-.answer .right .date {
-  font-size: 0.8em;
-}
-
-.answer .right p {
-  padding: 10px 0;
-}
+.answer .right .author { font-weight: bold; }
+.answer .right .date { font-size: 0.8em; }
+.answer .right p { padding: 10px 0; }
 
 /* Wrapper */
 
@@ -227,15 +227,12 @@ a:hover {
 
 #search {
   float: right;
-  width: 280px;
   height: 40px;
+  width: 280px;
   padding: 0px 0px 0px 0px;
 }
 
-#search form {
-  margin: 0;
-  padding: 10px 0 0 20px;
-}
+#search form { margin: 0; padding: 10px 0 0 20px; }
 
 #search fieldset {
   margin: 0;
@@ -266,10 +263,7 @@ a:hover {
 
 /* Menu */
 
-#menu {
-  /* float: right; */
-  margin: 20px 0 0 0;
-}
+#menu { margin: 20px 0 0 0; }
 
 #menu ul li.current_page_item a {
   color: #EB1D1D;

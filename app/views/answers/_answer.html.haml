@@ -2,7 +2,7 @@
 - @answer_counter += 1
 .answer
   .left
-    = image_tag avatar_url(answer.author, :size => 65)
+    = image_tag avatar_url(answer.author, :size => 32)
   .right
     = "#{@answer_counter.to_s}."
     %span.author
@@ -10,4 +10,5 @@
     %span.date
       =l answer.created_at
     %p= answer.content
+  %hr
 
