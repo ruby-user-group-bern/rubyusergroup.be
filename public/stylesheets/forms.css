@@ -98,3 +98,9 @@ textarea.text {
   background-color: #ffcccc;
   border: solid 1px #cc6666;
 }
+
+/* Topic */
+#sidebar #new_topic label { margin: 0; }
+#sidebar #new_topic input.string { margin: 0; width: 250px; }
+#sidebar #new_topic input.button { margin: 0;}
+
