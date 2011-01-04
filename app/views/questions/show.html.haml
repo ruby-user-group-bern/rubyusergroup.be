@@ -1,5 +1,5 @@
 .question.container
-  = render @question
+  = render :partial => "questions/question", :locals => { :full_text => true, :question => @question }
 
 - if can? :read, @question => Answer
   #answers

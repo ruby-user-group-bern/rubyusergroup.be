@@ -1,3 +1,5 @@
+- full_text ||= false
+
 .question.container
   .right
     %h2
@@ -7,8 +9,11 @@
       %strong Erstellt am:
       = l question.created_at
     %p.content
-      - omission = "... #{link_to("mehr", question)}"
-      = raw truncate(question.content, :length => 250, :omission => omission)
+      - unless full_text
+        - omission = "... #{link_to("mehr", question)}"
+        = raw truncate(question.content, :length => 250, :omission => omission)
+      - else
+        = raw question.content
   .left
     .nr
       = number_for(question)
