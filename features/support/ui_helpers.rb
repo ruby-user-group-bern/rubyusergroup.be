@@ -47,7 +47,7 @@ module UiHelpers
       topic_data = {
         :title => title,
         :node => topic_node,
-        :votes => topic_node.all('.voters img').count.to_s,
+        :votes => topic_node.find('.votes-info .item-count').plain_text,
       }
 
       def topic_data.add_vote

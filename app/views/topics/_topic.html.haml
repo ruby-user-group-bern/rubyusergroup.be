@@ -3,14 +3,23 @@
     %h2
       = topic
       = render 'actions', :topic => topic
-    %span.info
-      %strong Erstellt am:
-      = l topic.created_at
     .voters.content
-      - topic.votes.each do |vote|
-        = image_tag avatar_url(vote.voter, :size => 50)
+      %span.info
+        %strong Erstellt am:
+        = l topic.created_at
+      %br
+      %span.info
+        %strong Author:
+        - if topic.submitter.github_username.present?
+          = link_to topic.submitter.github_username, github_url(topic.submitter.github_username)
+        - else
+          = topic.submitter
+
   .left
     .nr
       = number_for(topic)
-    .avatar
-      = image_tag avatar_url(topic.submitter)
+    .votes-info
+      .item-count
+        = topic.votes.count
+      %div
+        votes

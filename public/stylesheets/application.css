@@ -474,6 +474,23 @@ a:hover {
   border-bottom: 2px #888 dashed;
 }
 
+.votes-info {
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  border-top: 1px solid #eef;
+  border-left: 1px solid #eef;
+  font-size: 11px;
+  height: 38px;
+  padding: 8px 0 0 0;
+  text-align: center;
+  width: 46px;
+}
+
+.votes-info .item-count {
+  font-size: 17px;
+  font-weight: bold;
+}
+
 /* Pagination */
 
 .pagination {
