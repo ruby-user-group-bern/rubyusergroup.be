@@ -22,7 +22,7 @@ When /^I vote for the topic "([^"]*)"$/ do |topic|
 end
 
 When /I add a topic called "([^"]*)"/ do |topic|
-  fill_in 'Titel', :with => topic
+  fill_in 'topic_title', :with => topic
   When %{I press "Thema hinzufügen"}
 end
 

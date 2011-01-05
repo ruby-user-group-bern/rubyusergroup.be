@@ -3,9 +3,11 @@
     %h2= t('views.topic.title')
     = render '/topics/list', :topics => Topic.top_5
   %li
+    %h2= t('views.topic.new_title')
     - if can? :create, Topic
       = render '/topics/form', :topic => Topic.new
-%li
+
+%li.tag_cloud
   %h2= t('views.question.tag_cloud')
   - tag_cloud(Question.tag_counts_on(:tags), %w(tag-size1 tag-size2 tag-size3 tag-size4)) do |tag, css_class|
     = link_to tag.name, questions_path(:tagged_with => tag.name), :class => css_class

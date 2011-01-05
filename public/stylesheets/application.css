@@ -429,6 +429,15 @@ a:hover {
 #sidebar .tag-size3 { font-size: 1.0em; }
 #sidebar .tag-size4 { font-size: 1.2em; }
 
+#sidebar .tag_cloud h2 { margin: 0 0 10px 0; }
+
+#sidebar .tag_cloud a { padding: 2px 0; line-height: 1.5em; }
+#sidebar .tag_cloud a:hover {
+  background: #ff0000;
+  color: #fff;
+  text-decoration: none;
+}
+
 /* Other Stuff */
 .clearfix {
   clear: both;

@@ -1,4 +1,7 @@
 de:
   views:
     topic:
-      title: Themen
+      title: Aktuelle Themen
+      new_title: Neues Thema hinzufügen
+
+      title_placeholder: Ihr Themenvorschlag...
