@@ -37,6 +37,12 @@ describe Question do
         subject.jabber_text.should == "Frage von Heinrich Henne:\n\nTitel?\nInhalt"
       end
     end
+
+    describe "#to_s" do
+      it "should use the title" do
+        subject.to_s.should == "Titel?"
+      end
+    end
   end
 
   describe "scopes: " do

@@ -3,12 +3,8 @@
   = f.input :email
   = f.input :github_username
   = f.input :receive_jabber_notifications
+  = f.input :receive_email_notifications
   = f.input :password, :hint => 'Du kannst das Passwort Feld leer lassen, wenn du dein Passwort nicht ändern möchtest.'
   = f.input :password_confirmation
   = f.input :current_password, :hint => "Du musst dein aktuelles Passwort eingeben um die Änderungen speichern zu können"
   = f.button :submit, "Speichern"
-
--# %h3 Cancel my account
--# %p
--#   Unhappy? #{link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete}.
--# = link_to "Back", :back

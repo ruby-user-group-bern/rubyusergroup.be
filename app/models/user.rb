@@ -5,13 +5,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :github_username, :receive_jabber_notifications
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :github_username, :receive_jabber_notifications, :receive_email_notifications
 
   has_many :questions, :foreign_key => 'author_id'
   has_many :answers, :foreign_key => 'author_id'
   has_many :topics, :foreign_key => 'submitter_id'
 
   scope :notified_by_jabber, where(:receive_jabber_notifications => true)
+  scope :notified_by_email, where(:receive_email_notifications => true)
 
   def to_s
     self[:github_username].present? ? self[:github_username] : email.gsub(/@.+/, '')

@@ -30,4 +30,28 @@ describe User do
     end
   end
 
+  describe "scopes: ", :slow => true do
+    describe "notified_by_jabber" do
+      before(:each) do
+        @notified = Factory(:user, :receive_jabber_notifications => true)
+        @not_notified = Factory(:user, :receive_jabber_notifications => false)
+      end
+
+      it "should only return flagged users" do
+        User.notified_by_jabber.should == [@notified]
+      end
+    end
+
+    describe "notified_by_email" do
+      before(:each) do
+        @notified = Factory(:user, :receive_email_notifications => true)
+        @not_notified = Factory(:user, :receive_email_notifications => false)
+      end
+
+      it "should only return flagged users" do
+        User.notified_by_email.should == [@notified]
+      end
+    end
+  end
+
 end

@@ -6,7 +6,7 @@
   .right
     = "#{@answer_counter.to_s}."
     %span.author
-      = answer.author.email
+      = answer.author
     %span.date
       =l answer.created_at
     %p= answer.content

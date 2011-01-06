@@ -1,0 +1,8 @@
+%p
+  = image_tag avatar_url(answer.author, :size => 32)
+  %strong= answer.author
+  schrieb am
+  = l @answer.created_at
+
+%blockquote
+  = answer.content

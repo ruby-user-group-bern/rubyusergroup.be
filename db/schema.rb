@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110102183958) do
+ActiveRecord::Schema.define(:version => 20110106195603) do
 
   create_table "answers", :force => true do |t|
     t.integer  "question_id"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20110102183958) do
     t.datetime "updated_at"
     t.string   "github_username"
     t.boolean  "receive_jabber_notifications"
+    t.boolean  "receive_email_notifications"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
