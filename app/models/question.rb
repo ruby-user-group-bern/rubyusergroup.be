@@ -21,8 +21,20 @@ class Question < ActiveRecord::Base
 
   notify :after_create, :jabber_text
 
+  def to_s
+    title
+  end
+
   def jabber_text
     "Frage von #{author}:\n\n#{title}\n#{content}"
+  end
+
+  after_create :send_email
+
+  def send_email
+    User.notified_by_email.each do |user|
+      NotificationMailer.new_question_email(self, user).deliver
+    end
   end
 
 end

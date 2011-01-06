@@ -16,4 +16,13 @@ class Answer < ActiveRecord::Base
     "Antwort auf die Frage '#{question.title}':\n\n#{author} sagt:\n#{content}"
   end
 
+  after_create :send_email
+
+  def send_email
+    User.notified_by_email.each do |user|
+      NotificationMailer.new_answer_email(self, user).deliver
+    end
+  end
+
+
 end

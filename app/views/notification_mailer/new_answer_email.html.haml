@@ -1,0 +1,11 @@
+%h1= link_to @question.title, question_url(@question)
+%p
+  = image_tag avatar_url(@question.author)
+  %strong= @question.author
+  schrieb am
+  = l @question.created_at
+%blockquote
+  = @question.content
+%hr
+
+= render :partial => 'answer', :collection => @question.answers
