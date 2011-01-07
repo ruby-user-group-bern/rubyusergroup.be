@@ -31,8 +31,6 @@
           #menu
             - if user_signed_in?
               %ul
-                %li
-                  = link_to "Home", root_path
                 - if can? :read, Question
                   %li
                     = link_to "Fragen", questions_path
