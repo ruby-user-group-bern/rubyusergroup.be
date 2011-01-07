@@ -70,4 +70,17 @@ describe Ability do
 
   end
 
+  describe "feedbacks" do
+    let(:feedback) { Factory(:feedback) }
+
+    it { should be_able_to(:create, Feedback) }
+    it { should_not be_able_to(:read, Feedback) }
+    it { should_not be_able_to(:manage, feedback) }
+
+    context "author" do
+      let(:feedback) { Factory(:feedback, :author => current_user) }
+      it { should_not be_able_to(:manage, feedback) }
+    end
+  end
+
 end

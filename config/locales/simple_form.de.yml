@@ -7,3 +7,5 @@ de:
         create: "Anmelden"
       answer:
         create: "Antworten"
+      feedback:
+        create: "%{model} senden"
