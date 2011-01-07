@@ -112,7 +112,6 @@ a:hover {
   clear: both;
   margin-bottom: 40px;
   min-height: 100px;
-
 }
 
 .container .right {
@@ -324,6 +323,13 @@ a:hover {
   padding: 0;
 }
 
+#sidebar .right {
+  width: 180px;
+}
+
+#sidebar .container {
+  min-height: 80px;
+}
 
 /* #sidebar li ul { */
 /*   margin: 0px; */
@@ -454,7 +460,7 @@ a:hover {
 #topic_list h3 {
   width: 180px;
   float: right;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   font-size: 0.9em;
 }
 

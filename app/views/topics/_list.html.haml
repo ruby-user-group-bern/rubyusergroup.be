@@ -1,8 +1,13 @@
 %ul#topic_list
   - for topic in topics
-    %li
-      %h3= topic.title
-      .vote_badge
-        %span.vote_count= topic.votes.count
+    %li.topic.container
+      .right
+        %h3= topic.title
         - if can?(:vote, topic)
           = link_to 'vote +1', topic_votes_path(topic), :method => :post, :class => 'vote_link'
+      .left
+        .votes-info
+          .item-count
+            = topic.votes.count
+          %div
+            votes
