@@ -1,0 +1,7 @@
+%h1= @feedback.title
+
+%p
+  = image_tag avatar_url(@feedback.author)
+  = @feedback.content
+
+%p= "Erstellt am: #{l @feedback.created_at}"

@@ -43,4 +43,24 @@ describe NotificationMailer do
     its(:encoded) { should =~ /I love red/ }
   end
 
+  describe "#new_feedback_mail" do
+    let(:author) do
+      user = Factory(:user)
+      user.stub!(:to_s => 'Jakobli')
+      user
+    end
+    let(:feedback) do
+      Factory(:feedback, :title => 'You doing it great!',
+              :content => 'We should organize a bbq...',
+              :author => author)
+    end
+
+    subject { NotificationMailer.new_feedback_email(feedback).deliver }
+
+    its(:to) { should == ['feedback@rubyusergroup.be'] }
+    its(:subject) { should == 'Feedback von Jakobli' }
+    its(:encoded) { should =~ /You doing it great!/ }
+    its(:encoded) { should =~ /We should organize a bbq.../ }
+  end
+
 end

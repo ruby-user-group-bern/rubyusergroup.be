@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   has_many :questions, :foreign_key => 'author_id'
   has_many :answers, :foreign_key => 'author_id'
   has_many :topics, :foreign_key => 'submitter_id'
+  has_many :feedbacks, :foreign_key => 'author_id'
 
   scope :notified_by_jabber, where(:receive_jabber_notifications => true)
   scope :notified_by_email, where(:receive_email_notifications => true)

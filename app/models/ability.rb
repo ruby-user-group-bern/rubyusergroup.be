@@ -22,7 +22,9 @@ class Ability
     can :create, Topic
     can :create, Answer
     can :create, Question
+    can :create, Feedback
 
     can :read, :all
+    cannot :read, Feedback
   end
 end

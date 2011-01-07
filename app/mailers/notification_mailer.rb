@@ -17,4 +17,10 @@ class NotificationMailer < ActionMailer::Base
          :subject => "#{answer.author} antwortet auf: #{answer.question}")
   end
 
+  def new_feedback_email(feedback)
+    @feedback = feedback
+    mail(:to => 'feedback@rubyusergroup.be',
+         :subject => "Feedback von #{feedback.author}")
+  end
+
 end

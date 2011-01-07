@@ -10,3 +10,8 @@ de:
       destroy:
         notice: "%{resource_name} wurde erfolgreich gelöscht."
         alert: "%{resource_name} konnte nicht gelöscht werden."
+
+    feedbacks:
+      create:
+        notice: "%{resource_name} wurde erfolgreich gesendet."
+        alert: "%{resource_name} konnte nicht gesendet werden."
