@@ -6,4 +6,9 @@ class Feedback < ActiveRecord::Base
   validates_presence_of :content
   validates_presence_of :author
 
+  after_create :send_email
+
+  def send_email
+    NotificationMailer.new_feedback_email(self).deliver
+  end
 end
