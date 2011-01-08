@@ -10,12 +10,12 @@ label {
   padding: 4px 3px 3px 3px;
 }
 
-label.string {
-  display: block;
-  float: left;
-  margin: 2px 0 0 0;
-  padding: 2px 3px 3px 3px;
-}
+/* label.string { */
+/*   display: block; */
+/*   float: left; */
+/*   margin: 2px 0 0 0; */
+/*   padding: 2px 3px 3px 3px; */
+/* } */
 
 label.text {
   display: block;
@@ -150,6 +150,83 @@ textarea.text {
 }
 
 #new_question .field_with_errors .error {
+  font-size: 0.7em;
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: #cc6666;
+}
+
+/* User */
+#user_edit label {
+  font-size: 14px;
+  color: #888;
+  font-weight: bold;
+  float: none;
+  margin: 0 0 5px 0;
+}
+
+#user_edit label.boolean {
+  font-size: 14px;
+  color: #888;
+  font-weight: bold;
+  float: left;
+  margin: 0 0 5px 0;
+}
+
+#user_edit .hint {
+  margin: 2px 0 0 0;
+  padding: 0;
+  color: #888;
+  font-style: italic;
+}
+
+#user_edit input.button {
+  margin: 0;
+  font-weight: bold;
+  color: #888;
+  margin: 10px 0 0 0;
+}
+
+#user_edit .field_with_errors .error {
+  font-size: 0.7em;
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: #cc6666;
+}
+
+#user_new label {
+  font-size: 14px;
+  color: #888;
+  font-weight: bold;
+  float: none;
+  margin: 0 0 5px 0;
+}
+
+#user_new label.boolean {
+  font-size: 14px;
+  color: #888;
+  font-weight: bold;
+  float: left;
+  margin: 0 0 5px 0;
+}
+
+#user_new .hint {
+  margin: 2px 0 0 0;
+  padding: 0;
+  color: #888;
+  font-style: italic;
+}
+
+#user_new input.button {
+  margin: 0;
+  font-weight: bold;
+  color: #888;
+  margin: 5px 0 10px 0;
+}
+
+#user_new .field_with_errors .error {
   font-size: 0.7em;
   display: block;
   margin: 0;

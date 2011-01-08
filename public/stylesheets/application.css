@@ -102,7 +102,7 @@ a:hover {
   font-size: 16px;
 }
 
-/* Questions */
+
 
 
 
@@ -552,4 +552,25 @@ a:hover {
 
 .pagination .next_page.lonely {
 	margin-left: 0;
+}
+
+/* User */
+#content #user_edit .left {
+  width: 300px;
+  float: left;
+}
+
+#content #user_edit .right {
+  float: right;
+  width: 300px;
+}
+
+#content #user_new .left {
+  width: 300px;
+  float: left;
+}
+
+#content #user_new .right {
+  float: right;
+  width: 300px;
 }
