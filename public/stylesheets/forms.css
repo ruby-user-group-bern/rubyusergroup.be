@@ -37,7 +37,7 @@ input.button {
   border: 1px solid #E6E6E6;
   margin: 5px 0 0 156px;
   padding: 5px;
-  color: #555;
+  color: #888;
 }
 
 input.string {
@@ -76,9 +76,10 @@ textarea.text {
   display: inline-block;
   margin: 0 0 20px 60px;
   padding: 7px;
-  color: #555;
+  color: #888;
   text-decoration: none;
   font-size: 14px;
+  font-weight: bold;
 }
 
 .hint {
@@ -104,3 +105,54 @@ textarea.text {
 #sidebar #new_topic input.string { margin: 0; width: 250px; }
 #sidebar #new_topic input.button { margin: 0;}
 
+/* Feedback */
+#feedback #new_feedback label {
+  font-size: 14px;
+  color: #888;
+  font-weight: bold;
+  float: none;
+  margin: 0 0 5px 0;
+}
+
+#feedback #new_feedback input.button {
+  margin: 0;
+  font-weight: bold;
+}
+
+#feedback .field_with_errors .error {
+  font-size: 0.7em;
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: #cc6666;
+}
+
+/* Question */
+#new_question label {
+  font-size: 14px;
+  color: #888;
+  font-weight: bold;
+  float: none;
+  margin: 0 0 5px 0;
+}
+
+#new_question .hint {
+  margin: 2px 0 0 0;
+  padding: 0;
+  color: #888;
+  font-style: italic;
+}
+
+#new_question input.button {
+  margin: 0;
+  font-weight: bold;
+  color: #888;
+}
+
+#new_question .field_with_errors .error {
+  font-size: 0.7em;
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: #cc6666;
+}

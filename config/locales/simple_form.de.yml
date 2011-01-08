@@ -9,3 +9,8 @@ de:
         create: "Antworten"
       feedback:
         create: "%{model} senden"
+
+  simple_form:
+    hints:
+      question:
+        tag_list: "Mehrere Tags mit Komma trennen."

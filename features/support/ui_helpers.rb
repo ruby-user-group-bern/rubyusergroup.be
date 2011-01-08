@@ -24,7 +24,7 @@ module UiHelpers
       topic_data = {
         :title => title,
         :node => topic_node,
-        :votes => topic_node.find('.vote_count').plain_text,
+        :votes => topic_node.find('.vote-count').plain_text,
       }
 
       def topic_data.add_vote
@@ -47,7 +47,7 @@ module UiHelpers
       topic_data = {
         :title => title,
         :node => topic_node,
-        :votes => topic_node.find('.votes-info .item-count').plain_text,
+        :votes => topic_node.find('.votes-info .vote-count').plain_text,
       }
 
       def topic_data.add_vote
