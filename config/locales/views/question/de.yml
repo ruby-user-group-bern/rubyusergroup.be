@@ -1,4 +1,5 @@
 de:
   views:
     question:
-      tag_cloud: Tags
+      text: "Bitte stellen Sie hier Ihre Ruby spezifische Fragen, erörtern Lösungsansätze und geben Antworten."
+      tag_cloud: "Tags"

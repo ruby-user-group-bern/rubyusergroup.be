@@ -1,4 +1,5 @@
 #questions
+  %p= t('views.question.text')
   - if can? :create, Question
     = link_to "Neue Frage Erstellen", new_question_path, :class => 'button'
   = render @questions

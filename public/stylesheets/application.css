@@ -100,6 +100,7 @@ a:hover {
   line-height: 20px;
   color: #555;
   font-size: 16px;
+  margin: 0 0 20px 0;
 }
 
 
@@ -328,32 +329,8 @@ a:hover {
 }
 
 #sidebar .container {
-  min-height: 80px;
+  min-height: 50px;
 }
-
-/* #sidebar li ul { */
-/*   margin: 0px; */
-/*   padding-bottom: 30px; */
-/* } */
-
-/* #sidebar li li { */
-/*   line-height: 35px; */
-/*   border-bottom: 1px solid #BBBBBB; */
-/*   border-left: none; */
-/*   text-align: left; */
-/* } */
-
-/* #sidebar li li span { */
-/*   display: block; */
-/*   margin-top: -20px; */
-/*   padding: 0; */
-/*   font-size: 11px; */
-/*   font-style: italic; */
-/* } */
-
-/* #sidebar li li a { */
-/*   padding: 0px 0px 0px 20px; */
-/* } */
 
 #sidebar h2 {
   margin: 0px 0px 15px 0px;
@@ -368,10 +345,9 @@ a:hover {
 #sidebar p {
   margin: 0 0px;
   padding: 0px 20px 20px 0px;
-  text-align: justify;
-  line-height: 20px;
+  line-height: 1.2em;
   color: #555;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 #sidebar a {
