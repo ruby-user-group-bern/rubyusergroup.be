@@ -2,7 +2,7 @@ Feature: submit a question
 
   Background:
     Given I am a new, authenticated user
-    And I am on the home page
+    And I am on the questions page
     When I follow "Neue Frage"
 
   Scenario: add a question

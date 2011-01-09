@@ -3,7 +3,7 @@ Feature: vote an existing topic
   Background:
     Given I am a new, authenticated user
     And a topic named "writing specs with RSpec" with 2 votes
-    And I am on the home page
+    And I am on the questions page
 
   Scenario: vote for a topic in the sidebar
     When I vote for the topic "writing specs with RSpec"
@@ -23,5 +23,5 @@ Feature: vote an existing topic
   Scenario: you can't vote your own topics
     Given I am the submitter of the topic "writing specs with RSpec"
     # reload is needed
-    And I am on the home page
+    And I am on the questions page
     Then I should not be able to vote for the topic "writing specs with RSpec"

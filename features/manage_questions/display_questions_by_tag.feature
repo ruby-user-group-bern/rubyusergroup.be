@@ -8,7 +8,7 @@ Feature: display tagged questions
       | ruby                  | programming in ruby, the basics |
       | ruby, rspec, cucumber | testing with ruby               |
       | ruby, rspec           | rspec2                          |
-    And I am on the home page
+    And I am on the questions page
 
   Scenario: list questions by tag
     Then I should see the following questions:

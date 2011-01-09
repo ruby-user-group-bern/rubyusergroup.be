@@ -12,7 +12,7 @@ class TopicsController < InheritedResources::Base
       success.html { redirect_to :back }
       failure.html do
         flash[:alert] = resource.errors.full_messages.first
-        redirect_to root_path
+        redirect_to questions_path
       end
     end
   end

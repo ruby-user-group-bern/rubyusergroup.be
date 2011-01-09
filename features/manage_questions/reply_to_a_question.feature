@@ -5,7 +5,7 @@ Feature: submit a reply to a question
     And a question exists with a title of "What is your name?"
 
   Scenario: add a reply to an existing question
-    Given I am on the home page
+    Given I am on the questions page
     When I follow "What is your name?"
     And I fill in "answer_content" with "Hans Peter"
     And I press "Antworten"

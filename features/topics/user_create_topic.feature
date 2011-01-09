@@ -2,12 +2,12 @@ Feature: submit a topic
 
   Background:
     Given I am a new, authenticated user
-    And I am on the home page
+    And I am on the questions page
 
   Scenario: add a topic from the questions page
     When I add a topic called "Cucumber organization"
     Then I should see the flash notice "Thema wurde erfolgreich erstellt."
-    And I should be on the home page
+    And I should be on the questions page
     And I should see the topic "Cucumber organization"
 
   Scenario: add a topic from the topics page
@@ -21,4 +21,4 @@ Feature: submit a topic
     When I press "Thema hinzufügen"
     Then I should see the flash alert "Titel muss ausgefüllt werden"
     And I should not see the topic ""
-    And I should be on the home page
+    And I should be on the questions page

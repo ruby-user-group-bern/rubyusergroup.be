@@ -9,7 +9,7 @@ Feature: list questions
       | What is ActiveRecord?           | true   |
       | What is Rails?                  | false  |
       | How can I open a file with vim? | false  |
-    When I go to the home page
+    When I go to the questions page
     Then I should see "How can I open a file with vim?"
     And I should see "What is Rails?"
     And I should not see "What is ActiveRecord"
@@ -21,5 +21,5 @@ Feature: list questions
        fantastic success on all of our projects for more than a year. At the same time Steak and
        projects like it seem to be gaining traction; some people are seemingly frustrated and fed up with cucumber.
        """
-    When I go to the home page
+    When I go to the questions page
     Then I should see the link "mehr" to display the full question content

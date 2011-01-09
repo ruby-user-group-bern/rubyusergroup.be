@@ -1,0 +1,10 @@
+de:
+  views:
+    home:
+      title: "Willkommen bei der Ruby Usergroup Bern"
+      text: >
+        Die 2010 von <a href="http://www.xing.com/profile/Samuel_Tonini" target="_blank">Samuel Tonini</a> und <a href="https://www.xing.com/profile/Yves_Senn3" target="_blank">Yves Senn</a> gegründete Ruby User Group Bern richtet sich an interessierte Ruby
+        Entwickler/innen in Bern und Umgebung mit dem Ziel des gemeinsamen Erfahrungs- und Wissensaustausches.
+        In regelmäßigen Treffen nach gegenseitiger Absprache sollen die Mitglieder die Möglichkeit erhalten
+        sich in Diskussionen auszutauschen, eigene Ideen einzubringen und gemeinsame Open Source Projekte zu
+        realisieren.

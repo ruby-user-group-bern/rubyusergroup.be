@@ -10,7 +10,7 @@ Feature: show all details about a question
        """
 
   Scenario: not display link to show the full question content
-    When I go to the home page
+    When I go to the questions page
     And I follow "You're Cuking It Wrong?"
     Then I should not see the link "mehr" to display the full question content
 

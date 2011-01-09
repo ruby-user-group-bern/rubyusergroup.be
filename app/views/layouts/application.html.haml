@@ -29,20 +29,13 @@
               RubyUserGroup
               %span>Bern
           #menu
-            - if user_signed_in?
-              %ul
-                - if can? :read, Question
-                  %li
-                    = link_to "Fragen", questions_path
-                - if can? :read, Topic
-                  %li
-                    = link_to "Themen", topics_path
-                - if can? :read, User
-                  %li
-                    = link_to "Mitglieder", users_path
-                - if can? :create, Feedback
-                  %li
-                    = link_to "Feedback", new_feedback_path
+            -# - if user_signed_in?
+            %ul
+              %li= link_to "Home", root_path
+              %li= link_to "Fragen", questions_path
+              %li= link_to "Themen", topics_path
+              %li= link_to "Mitglieder", users_path
+              %li= link_to "Feedback", new_feedback_path
 
       #page
         #content
