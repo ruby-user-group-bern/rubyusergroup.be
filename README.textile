@@ -1,5 +1,0 @@
-h1. Ruby User Group Bern
-
-h2. ToDo
-
-Details sind in der "Issues Section":http://www.github.com/ruby-user-group-bern/rubyusergroup.be/issues
