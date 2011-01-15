@@ -15,3 +15,8 @@ de:
       create:
         notice: "%{resource_name} wurde erfolgreich gesendet."
         alert: "%{resource_name} konnte nicht gesendet werden."
+
+  layout:
+    footer:
+      text: "&copy; 2010 Ruby User Group Bern"
+
