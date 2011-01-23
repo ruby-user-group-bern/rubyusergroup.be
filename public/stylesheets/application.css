@@ -44,8 +44,9 @@ body {
   font-family: Georgia, serif;
   font-weight: normal;
   font-size: 30pt;
-  color:#26211E;
-  text-shadow: -1px -1px 0px #101010, 1px 1px 0px #505050;
+  color:#55473C;
+  /* text-shadow: -1px -1px 0px #101010, 1px 1px 0px #505050; */
+  text-shadow: black 0px 1px 0px;
 }
 
 #top-header {
