@@ -1,13 +1,14 @@
-%ul#topic_list
+%ul#topic-list.sidebar
   - for topic in topics
-    %li.topic.container
-      .right
-        %h3= topic.title
-        - if can?(:vote, topic)
-          = link_to 'vote +1', topic_votes_path(topic), :method => :post, :class => 'vote_link'
-      .left
-        .votes-info
-          .vote-count
-            = topic.votes.count
-          %div
-            votes
+    %li.sidebar
+      %span.votes-info
+        .vote-count
+          = topic.votes.count
+        votes
+      %span.vote-info-box
+        %span
+          %strong= topic.title
+      - if can?(:vote, topic)
+        %span.vote-box
+          = link_to '+1', topic_votes_path(topic), :method => :post, :class => 'vote_link button'
+

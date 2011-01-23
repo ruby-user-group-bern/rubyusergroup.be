@@ -1,25 +1,23 @@
-.topic.container
-  .right
-    %h2
-      = topic
-      = render 'actions', :topic => topic
-    .voters.content
-      %span.info
-        %strong Erstellt am:
-        = l topic.created_at
-      %br
-      %span.info
-        %strong Author:
-        - if topic.submitter.github_username.present?
-          = link_to topic.submitter.github_username, github_url(topic.submitter.github_username)
-        - else
-          = topic.submitter
-
-  .left
-    .nr
-      = number_for(topic)
-    .votes-info
-      .vote-count
-        = topic.votes.count
-      %div
-        votes
+%li.index
+  %span.votes-info
+    .vote-count
+      = topic.votes.count
+    votes
+  %span.vote-info-box
+    %span
+      %strong= topic.title
+    = render 'actions', :topic => topic
+    %br
+    %strong
+      Erstellt am:
+    = l topic.created_at
+    %br
+    %strong
+      Author:
+    - if topic.submitter.github_username.present?
+      = link_to topic.submitter.github_username, github_url(topic.submitter.github_username)
+    - else
+      = topic.submitter
+  - if can?(:vote, topic)
+    %span.vote-box
+      = link_to '+1', topic_votes_path(topic), :method => :post, :class => 'vote_link button'

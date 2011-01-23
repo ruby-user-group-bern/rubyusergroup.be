@@ -1,235 +1,260 @@
-div.input {
-  margin: 0 0 10px 0;
-}
-
-label {
-  width: 150px;
-  margin: 2px 0 0 0;
-  display: block;
-  float: left;
-  padding: 4px 3px 3px 3px;
-}
-
-/* label.string { */
-/*   display: block; */
-/*   float: left; */
-/*   margin: 2px 0 0 0; */
-/*   padding: 2px 3px 3px 3px; */
-/* } */
-
-label.text {
-  display: block;
-  float: left;
-  margin: 2px 0 0 0;
-  padding: 2px 3px 3px 3px;
-}
-
-abbr {
-  color: #ff0000;
-}
-
-input {
-  font-size: 14px;
-}
-
-input.button {
-  background: #F9F9F9;
-  border: 1px solid #E6E6E6;
-  margin: 5px 0 0 156px;
-  padding: 5px;
-  color: #888;
-}
-
 input.string {
-  padding: 2px 3px 3px;
-  width: 300px;
-  background: #F9F9F9;
-  border: 1px solid #E6E6E6;
-  color: #555;
+  width: 280px;
 }
 
 input.password {
-  padding: 2px 3px 3px;
-  width: 300px;
-  background: #F9F9F9;
-  border: 1px solid #E6E6E6;
-  color: #555;
+  width: 280px;
 }
 
-textarea.text {
-  font-size: 14px;
-  padding: 2px 3px 3px;
-  width: 400px;
-  background: #F9F9F9;
-  border: 1px solid #E6E6E6;
-  color: #555;
+#sidebar input.string {
+  width: 252px;
+  height: 22px;
+  font-size: 16px;
 }
 
-/* Answer Section */
-#new_answer { margin: 20px 0 0 60px; }
-#new_answer input.button { margin: 0; }
+#sidebar input.button {
+  margin: 8px 0 0 0;
+    color:#000;
+  text-shadow: #aaa 0px 1px 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+}
 
-/* Buttons */
-.button  {
-  background: #F9F9F9;
-  border: 1px solid #E6E6E6;
-  display: inline-block;
+#sidebar form {
+  padding: 0 10px 0 10px;
+  margin: 0 0 10px 0;
+}
+
+#new_answer {
+  padding: 0 0 20px 90px;
+}
+
+#new_answer textarea {
+  width: 545px;
+  height: 200px;
+  padding: 10px;
+  margin: 0 0 0 5px;
+}
+
+#new_answer input.button {
+  margin: 8px 0 0 0;
+  color:#000;
+  text-shadow: #aaa 0px 1px 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+}
+
+#new_feedback {
+  margin: 0 0 20px 20px;
+}
+
+#new_feedback label {
+  display: block;
+  font-size: 16px;
+  margin: 0 0 10px 0;
+}
+
+#new_feedback input.string {
+  height: 22px;
+  font-size: 16px;
+}
+
+#new_feedback input.button {
+  margin: 8px 0 0 0;
+  color:#000;
+  text-shadow: #aaa 0px 1px 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+}
+
+#new_feedback textarea {
+  width: 545px;
+  height: 200px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#new_feedback input {
   margin: 0 0 20px 0;
-  padding: 7px;
-  color: #888;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.hint {
-  margin-left: 150px;
-  display: block;
-  font-size: 0.7em;
-}
-
-/* Errors */
-.field_with_errors .error {
-  font-size: 0.7em;
-  margin-left: 150px;
-  color: #cc6666;
-}
-
-.field_with_errors input {
-  background-color: #ffcccc;
-  border: solid 1px #cc6666;
-}
-
-/* Topic */
-#sidebar #new_topic label { margin: 0; }
-#sidebar #new_topic input.string { margin: 0; width: 250px; }
-#sidebar #new_topic input.button { margin: 0;}
-
-/* Feedback */
-#feedback #new_feedback label {
-  font-size: 14px;
-  color: #888;
-  font-weight: bold;
-  float: none;
-  margin: 0 0 5px 0;
-}
-
-#feedback #new_feedback input.button {
-  margin: 0;
-  font-weight: bold;
-}
-
-#feedback .field_with_errors .error {
-  font-size: 0.7em;
-  display: block;
-  margin: 0;
-  padding: 0;
-  color: #cc6666;
 }
 
 /* Question */
-#new_question label {
-  font-size: 14px;
-  color: #888;
-  font-weight: bold;
-  float: none;
-  margin: 0 0 5px 0;
+
+#new_question {
+  margin: 0 0 20px 20px;
 }
 
-#new_question .hint {
-  margin: 2px 0 0 0;
-  padding: 0;
-  color: #888;
-  font-style: italic;
+#new_question label {
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 10px 0;
+}
+
+#new_question input.string {
+  height: 22px;
+  font-size: 16px;
 }
 
 #new_question input.button {
-  margin: 0;
+  margin: 8px 0 0 0;
+  color:#000;
+  text-shadow: #aaa 0px 1px 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
   font-weight: bold;
-  color: #888;
 }
 
-#new_question .field_with_errors .error {
-  font-size: 0.7em;
+#new_question textarea {
+  width: 545px;
+  height: 200px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#new_question input {
+  margin: 0 0 0 0;
+}
+
+#edit_question {
+  margin: 0 0 20px 20px;
+}
+
+#edit_question label {
   display: block;
-  margin: 0;
+  font-size: 16px;
+  margin: 10px 0 10px 0;
+}
+
+#edit_question input.string {
+  height: 22px;
+  font-size: 16px;
+}
+
+#edit_question input.button {
+  margin: 8px 0 0 0;
+  color:#000;
+  text-shadow: #aaa 0px 1px 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+}
+
+#edit_question textarea {
+  width: 545px;
+  height: 200px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#edit_question input {
+  margin: 0 0 0 0;
+}
+
+input#question_solved {
+  float: left;
+  margin: 3px 10px 0 2px;
+}
+
+.hint {
+  display: block;
+  font-size: 0.7em;
+  margin: 4px 0 0 0;
+  font-style: italic;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+.error {
+  display: block;
+  color: red;
+  margin: 4px 0 0 0;
   padding: 0;
-  color: #cc6666;
 }
 
 /* User */
-#user_edit label {
-  font-size: 14px;
-  color: #888;
-  font-weight: bold;
-  float: none;
-  margin: 0 0 5px 0;
-}
 
-#user_edit label.boolean {
-  font-size: 14px;
-  color: #888;
-  font-weight: bold;
-  float: left;
-  margin: 0 0 5px 0;
-}
-
-#user_edit .hint {
-  margin: 2px 0 0 0;
-  padding: 0;
-  color: #888;
-  font-style: italic;
-}
-
-#user_edit input.button {
-  margin: 0;
-  font-weight: bold;
-  color: #888;
-  margin: 10px 0 0 0;
-}
-
-#user_edit .field_with_errors .error {
-  font-size: 0.7em;
-  display: block;
-  margin: 0;
-  padding: 0;
-  color: #cc6666;
+#user_new {
+  margin: 0 0 20px 20px;
 }
 
 #user_new label {
-  font-size: 14px;
-  color: #888;
-  font-weight: bold;
-  float: none;
-  margin: 0 0 5px 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 10px 0;
 }
 
-#user_new label.boolean {
-  font-size: 14px;
-  color: #888;
-  font-weight: bold;
-  float: left;
-  margin: 0 0 5px 0;
+#user_new input.string {
+  height: 22px;
+  font-size: 16px;
 }
 
-#user_new .hint {
-  margin: 2px 0 0 0;
-  padding: 0;
-  color: #888;
-  font-style: italic;
+#user_new input.password {
+  height: 22px;
+  font-size: 16px;
 }
 
 #user_new input.button {
-  margin: 0;
+  margin: 8px 0 0 0;
+  color:#000;
+  text-shadow: #aaa 0px 1px 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
   font-weight: bold;
-  color: #888;
-  margin: 5px 0 10px 0;
 }
 
-#user_new .field_with_errors .error {
-  font-size: 0.7em;
+#user_remember_me {
+  float: left;
+  margin: 3px 10px 0 2px;
+}
+
+#user_receive_jabber_notifications {
+  float: left;
+  margin: 3px 10px 0 2px;
+}
+
+#user_receive_email_notifications {
+  float: left;
+  margin: 3px 10px 0 2px;
+}
+
+#user_edit {
+  margin: 0 0 20px 20px;
+}
+
+#user_edit label {
   display: block;
-  margin: 0;
-  padding: 0;
-  color: #cc6666;
+  font-size: 16px;
+  margin: 10px 0 10px 0;
+}
+
+#user_edit input.string {
+  height: 22px;
+  font-size: 16px;
+}
+
+#user_edit input.password {
+  height: 22px;
+  font-size: 16px;
+}
+
+#user_edit input.button {
+  margin: 8px 0 0 0;
+  color:#000;
+  text-shadow: #aaa 0px 1px 0px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
 }

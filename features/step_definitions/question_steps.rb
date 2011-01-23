@@ -1,7 +1,7 @@
 Then /^I should see the following questions:$/ do |question_table|
   actual_questions = all('#questions .question').map do |question|
     {
-      'Title' => question.find('h2').plain_text
+      'Title' => question.find('h4').plain_text
     }
   end
   question_table.diff! actual_questions

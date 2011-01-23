@@ -1,16 +1,11 @@
-#new_user
-  %h2 Registrieren
-  = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-    .left
-      = f.input :email
-      = f.input :password
-      = f.input :password_confirmation
-      = f.button :submit, "Registrieren"
-
-    .right
-      = f.input :github_username
-      = f.input :receive_jabber_notifications
-      = f.input :receive_email_notifications
-
-  .clearfix
-    = render :partial => "devise/shared/links"
+- @title = "Registrieren"
+= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+  = f.input :email
+  = f.input :password
+  = f.input :password_confirmation
+  = f.input :github_username
+  = f.input :receive_jabber_notifications
+  = f.input :receive_email_notifications
+  = f.button :submit, "Registrieren"
+.clearfix
+  = render :partial => "devise/shared/links"

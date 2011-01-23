@@ -1,23 +1,22 @@
-.user.container
-  .right
-    %h2
-      - if user.github_username.present?
-        = link_to user.github_username, github_url(user.github_username)
-      - else
-        = user
-    %span.info
-      %strong Erstellt am:
-      = l user.created_at
-    %dl.content.info
-      %dt Gestellte Fragen
-      %dd= user.questions.count
-      %dt Geschriebene Antworten
-      %dd= user.answers.count
-      %dt Eingereichte Themen
-      %dd= user.topics.count
+%li
   .left
-    .nr
-      = number_for(user)
-    .avatar
-      = image_tag avatar_url(user)
+    .nr= number_for(user)
+    .avatar= image_tag avatar_url(user)
+  %h4
+    - if user.github_username.present?
+      = link_to user.github_username, github_url(user.github_username)
+    - else
+      = user
+  %span.created
+    Erstellt am:
+    = l user.created_at
+  %p.text
+    %strong Gestellte Fragen:
+    = user.questions.count
+    %br
+    %strong Geschriebene Antworten:
+    = user.answers.count
+    %br
+    %strong Eingereichte Themen:
+    = user.topics.count
 
