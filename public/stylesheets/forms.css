@@ -1,45 +1,27 @@
+label {
+  display: block;
+  margin: 10px 0 5px 0;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+}
+
 input.string {
   width: 280px;
+  height: 22px;
+  font-size: 16px;
 }
 
 input.password {
   width: 280px;
-}
-
-#sidebar input.string {
-  width: 252px;
   height: 22px;
   font-size: 16px;
 }
 
-#sidebar input.button {
+input.button {
   margin: 8px 0 0 0;
-    color:#000;
+  color:#000;
   text-shadow: #aaa 0px 1px 0px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: bold;
-}
-
-#sidebar form {
-  padding: 0 10px 0 10px;
-  margin: 0 0 10px 0;
-}
-
-#new_answer {
-  padding: 0 0 20px 90px;
-}
-
-#new_answer textarea {
-  width: 545px;
-  height: 200px;
-  padding: 10px;
-  margin: 0 0 0 5px;
-}
-
-#new_answer input.button {
-  margin: 8px 0 0 0;
   color:#000;
   text-shadow: #aaa 0px 1px 0px;
   font-family: Helvetica, Arial, sans-serif;
@@ -48,131 +30,20 @@ input.password {
   font-weight: bold;
 }
 
-#new_feedback {
-  margin: 0 0 20px 20px;
-}
-
-#new_feedback label {
-  display: block;
-  font-size: 16px;
-  margin: 0 0 10px 0;
-}
-
-#new_feedback input.string {
-  height: 22px;
-  font-size: 16px;
-}
-
-#new_feedback input.button {
-  margin: 8px 0 0 0;
-  color:#000;
-  text-shadow: #aaa 0px 1px 0px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: bold;
-}
-
-#new_feedback textarea {
+textarea {
   width: 545px;
   height: 200px;
   padding: 10px;
   font-size: 16px;
 }
 
-#new_feedback input {
-  margin: 0 0 20px 0;
-}
-
-/* Question */
-
-#new_question {
-  margin: 0 0 20px 20px;
-}
-
-#new_question label {
-  display: block;
-  font-size: 16px;
-  margin: 10px 0 10px 0;
-}
-
-#new_question input.string {
-  height: 22px;
-  font-size: 16px;
-}
-
-#new_question input.button {
-  margin: 8px 0 0 0;
-  color:#000;
-  text-shadow: #aaa 0px 1px 0px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: bold;
-}
-
-#new_question textarea {
-  width: 545px;
-  height: 200px;
-  padding: 10px;
-  font-size: 16px;
-}
-
-#new_question input {
-  margin: 0 0 0 0;
-}
-
-#edit_question {
-  margin: 0 0 20px 20px;
-}
-
-#edit_question label {
-  display: block;
-  font-size: 16px;
-  margin: 10px 0 10px 0;
-}
-
-#edit_question input.string {
-  height: 22px;
-  font-size: 16px;
-}
-
-#edit_question input.button {
-  margin: 8px 0 0 0;
-  color:#000;
-  text-shadow: #aaa 0px 1px 0px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: bold;
-}
-
-#edit_question textarea {
-  width: 545px;
-  height: 200px;
-  padding: 10px;
-  font-size: 16px;
-}
-
-#edit_question input {
-  margin: 0 0 0 0;
-}
-
-input#question_solved {
+input.boolean {
   float: left;
-  margin: 3px 10px 0 2px;
+  margin: 2px 10px 0 2px;
 }
 
-.hint {
-  display: block;
-  font-size: 0.7em;
-  margin: 4px 0 0 0;
-  font-style: italic;
-}
-
-label {
-  font-weight: bold;
-  color: #333;
+form {
+  margin: 10px 0 10px 20px;
 }
 
 .error {
@@ -182,79 +53,23 @@ label {
   padding: 0;
 }
 
-/* User */
-
-#user_new {
-  margin: 0 0 20px 20px;
-}
-
-#user_new label {
+.hint {
   display: block;
-  font-size: 16px;
-  margin: 10px 0 10px 0;
+  font-size: 0.7em;
+  margin: 4px 0 0 0;
+  font-style: italic;
 }
 
-#user_new input.string {
-  height: 22px;
-  font-size: 16px;
+/* Special Form Cases */
+
+#sidebar input.string {
+  width: 252px;
 }
 
-#user_new input.password {
-  height: 22px;
-  font-size: 16px;
+#sidebar form {
+  margin: 10px 0 10px 10px;
 }
 
-#user_new input.button {
-  margin: 8px 0 0 0;
-  color:#000;
-  text-shadow: #aaa 0px 1px 0px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: bold;
-}
-
-#user_remember_me {
-  float: left;
-  margin: 3px 10px 0 2px;
-}
-
-#user_receive_jabber_notifications {
-  float: left;
-  margin: 3px 10px 0 2px;
-}
-
-#user_receive_email_notifications {
-  float: left;
-  margin: 3px 10px 0 2px;
-}
-
-#user_edit {
-  margin: 0 0 20px 20px;
-}
-
-#user_edit label {
-  display: block;
-  font-size: 16px;
-  margin: 10px 0 10px 0;
-}
-
-#user_edit input.string {
-  height: 22px;
-  font-size: 16px;
-}
-
-#user_edit input.password {
-  height: 22px;
-  font-size: 16px;
-}
-
-#user_edit input.button {
-  margin: 8px 0 0 0;
-  color:#000;
-  text-shadow: #aaa 0px 1px 0px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: bold;
+#new_answer {
+  margin: 0 0 20px 95px;
 }
