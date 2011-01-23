@@ -1,7 +1,10 @@
+- @title = "Fragen rund um Ruby"
+%p= t('views.question.text')
+- if can? :create, Question
+  = link_to "Neue Frage Erstellen", new_question_path, :class => 'large button'
+
 #questions
-  %p= t('views.question.text')
-  - if can? :create, Question
-    = link_to "Neue Frage Erstellen", new_question_path, :class => 'button'
-  = render @questions
+  %ul.question-list
+    = render @questions
 
 = will_paginate @questions

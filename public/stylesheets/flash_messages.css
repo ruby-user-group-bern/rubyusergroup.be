@@ -1,12 +1,12 @@
 /* Flash Messages */
 
 #flash_messages {
-  width: 660px;
+  width: 100%;
 }
 
 #flash_messages .notice, .error, .alert {
-  padding: 10px 12px;
-  margin: 0px 0 10px 0;
+  margin: 20px 0px 20px 20px;
+  padding: 10px 0 10px 10px;
 }
 
 #flash_messages .notice {

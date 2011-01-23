@@ -1,11 +1,13 @@
-.question.container
-  = render :partial => "questions/question", :locals => { :full_text => true, :question => @question }
+#questions
+  %ul.question-list.show
+    = render :partial => "questions/question", :locals => { :full_text => true, :question => @question }
 
 - if can? :read, @question => Answer
   #answers
-    - for answer in @question.answers
-      - unless answer.new_record?
-        = render 'answers/answer', :answer => answer
+    %ul.answer-list
+      - for answer in @question.answers
+        - unless answer.new_record?
+          = render 'answers/answer', :answer => answer
 
   - if can? :create, @question => Answer
     = render 'answers/form', :question => @question
