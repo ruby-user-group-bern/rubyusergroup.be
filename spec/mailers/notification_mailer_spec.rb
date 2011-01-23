@@ -55,6 +55,10 @@ describe NotificationMailer do
               :author => author)
     end
 
+    before do
+      ENV.should_receive(:[]).with('GMAIL_LOGIN').any_number_of_times.and_return('feedback@rubyusergroup.be')
+    end
+
     subject { NotificationMailer.new_feedback_email(feedback).deliver }
 
     its(:to) { should == ['feedback@rubyusergroup.be'] }

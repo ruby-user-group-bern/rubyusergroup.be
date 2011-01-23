@@ -19,7 +19,7 @@ class NotificationMailer < ActionMailer::Base
 
   def new_feedback_email(feedback)
     @feedback = feedback
-    mail(:to => 'feedback@rubyusergroup.be',
+    mail(:to => ENV['GMAIL_LOGIN'],
          :subject => "Feedback von #{feedback.author}")
   end
 
