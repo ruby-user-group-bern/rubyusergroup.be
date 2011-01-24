@@ -4,9 +4,9 @@
   = f.input :password, :hint => 'Du kannst das Passwort Feld leer lassen, wenn du dein Passwort nicht ändern möchtest.'
   = f.input :password_confirmation
   = f.input :github_username
-  = f.input :receive_jabber_notifications
+  = f.input :receive_jabber_notifications, :hint => "Sendet eine kleine Mitteilung über Jabber bei einer Aktion die mich betrifft."
   .clearfix
-  = f.input :receive_email_notifications
+  = f.input :receive_email_notifications, :hint => "Sendet eine E-Mail bei einer Aktion die mich betrifft."
   .clearfix
   = f.input :current_password, :hint => "Du musst dein aktuelles Passwort eingeben um die Änderungen speichern zu können"
   = f.button :submit, "Speichern"
