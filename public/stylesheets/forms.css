@@ -22,12 +22,15 @@ input.button {
   margin: 8px 0 0 0;
   color:#000;
   text-shadow: #aaa 0px 1px 0px;
-  color:#000;
-  text-shadow: #aaa 0px 1px 0px;
   font-family: Helvetica, Arial, sans-serif;
   font-style: normal;
+  padding: 8px 12px;
   font-variant: normal;
   font-weight: bold;
+  border-top: none;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  border-right: none;
+  border-left: none;
 }
 
 textarea {
@@ -58,6 +61,10 @@ form {
   font-size: 0.7em;
   margin: 4px 0 0 0;
   font-style: italic;
+}
+
+abbr[title='required'] {
+  color: red;
 }
 
 /* Special Form Cases */
