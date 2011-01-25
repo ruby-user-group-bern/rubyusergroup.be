@@ -18,13 +18,17 @@ class Ability
       topic.submitter == user
     end
 
-    can :create, Vote
-    can :create, Topic
-    can :create, Answer
-    can :create, Question
-    can :create, Feedback
+    if user && user.admin?
+      can :manage, :all
+    else
+      can :create, Vote
+      can :create, Topic
+      can :create, Answer
+      can :create, Question
+      can :create, Feedback
 
-    can :read, :all
-    cannot :read, Feedback
+      can :read, :all
+      cannot :read, Feedback
+    end
   end
 end

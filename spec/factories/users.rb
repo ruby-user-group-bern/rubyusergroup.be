@@ -5,3 +5,7 @@ Factory.define :user do |f|
   f.receive_email_notifications { true }
   f.receive_jabber_notifications { false }
 end
+
+Factory.define :admin, :parent => :user do |f|
+  f.admin { true }
+end
