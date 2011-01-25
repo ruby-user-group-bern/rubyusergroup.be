@@ -43,7 +43,7 @@
             %div{:class => "flash #{type}"}= message
         = yield
         #footer
-          %p &copy; 2010 Ruby User Group Bern
+          %p= raw t('layout.footer.text')
       - if user_signed_in?
         #sidebar
           = render_sidebar
