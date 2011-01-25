@@ -83,4 +83,10 @@ describe Ability do
     end
   end
 
+  describe "admin" do
+    subject { Ability.new(Factory(:admin)) }
+
+    it { should be_able_to(:manage, :all) }
+  end
+
 end
