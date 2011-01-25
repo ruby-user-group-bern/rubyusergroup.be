@@ -9,7 +9,6 @@ Feature: list usergroup users
       |  7  | john.doe    |
     And I am on the home page
 
-  @wip
   Scenario: list users
     When I follow "Mitglieder"
     Then I should see the following users:
