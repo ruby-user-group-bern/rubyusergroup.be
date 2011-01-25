@@ -32,7 +32,19 @@ describe User do
   end
 
   describe "scopes: ", :slow => true do
-    describe "notified_by_jabber" do
+    describe ".ordered" do
+      before do
+        @user_2 = Factory(:user, :id => 2)
+        @user_3 = Factory(:user, :id => 3)
+        @user_1 = Factory(:user, :id => 1)
+      end
+
+      it "should order the users by id" do
+        User.ordered.map(&:id).should == [@user_1.id, @user_2.id, @user_3.id]
+      end
+    end
+
+    describe ".notified_by_jabber" do
       before(:each) do
         @notified = Factory(:user, :receive_jabber_notifications => true)
         @not_notified = Factory(:user, :receive_jabber_notifications => false)
@@ -43,7 +55,7 @@ describe User do
       end
     end
 
-    describe "notified_by_email" do
+    describe ".notified_by_email" do
       before(:each) do
         @notified = Factory(:user, :receive_email_notifications => true)
         @not_notified = Factory(:user, :receive_email_notifications => false)

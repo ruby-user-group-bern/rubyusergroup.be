@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
 
   scope :notified_by_jabber, where(:receive_jabber_notifications => true)
   scope :notified_by_email, where(:receive_email_notifications => true)
+  scope :ordered, order('id asc')
 
   def to_s
     self[:github_username].present? ? self[:github_username] : email.gsub(/@.+/, '')

@@ -7,4 +7,5 @@ class UsersController < InheritedResources::Base
 
   actions :index
 
+  has_scope :ordered, :type => :boolean, :default => true
 end
