@@ -18,4 +18,8 @@ module ApplicationHelper
     ''
   end
 
+  def make_active_when_controller_is(name)
+    "active" if controller_name == name
+  end
+
 end

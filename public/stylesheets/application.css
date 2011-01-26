@@ -125,7 +125,7 @@ body {
   font-weight: bold;
 }
 
-#navigation ul li.active {
+#navigation ul li a.active {
   background-color: #990D15;
 }
 

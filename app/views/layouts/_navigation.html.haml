@@ -1,0 +1,6 @@
+%ul
+  %li= link_to "Home", root_path, :class => "large button #{make_active_when_controller_is('home')}"
+  %li= link_to "Fragen", questions_path, :class => "large button #{make_active_when_controller_is('questions')}"
+  %li= link_to "Themen", topics_path, :class => "large button #{make_active_when_controller_is('topics')}"
+  %li= link_to "Mitglieder", users_path, :class => "large button #{make_active_when_controller_is('users')}"
+  %li= link_to "Feedback", new_feedback_path, :class => "large button #{make_active_when_controller_is('feedbacks')}"

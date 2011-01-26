@@ -27,12 +27,7 @@
           %h1 Bern
           %h2 Ruby User Group
     #navigation
-      %ul
-        %li= link_to "Home", root_path, :class => "large button"
-        %li= link_to "Fragen", questions_path, :class => "large button"
-        %li= link_to "Themen", topics_path, :class => "large button"
-        %li= link_to "Mitglieder", users_path, :class => "large button"
-        %li= link_to "Feedback", new_feedback_path, :class => "large button"
+      = render "layouts/navigation"
     #container
       #content
         - if @title
