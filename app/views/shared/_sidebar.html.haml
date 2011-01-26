@@ -1,0 +1,7 @@
+- if can? :read, Topic
+  %h1= t('views.topic.title')
+  = render '/topics/list', :topics => Topic.top_5
+  %h1= t('views.topic.new_title')
+  %p= t('views.topic.text')
+  - if can? :create, Topic
+    = render '/topics/form', :topic => Topic.new
