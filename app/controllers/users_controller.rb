@@ -8,4 +8,11 @@ class UsersController < InheritedResources::Base
   actions :index
 
   has_scope :ordered, :type => :boolean, :default => true
+
+  protected
+
+  def collection
+    @users ||= end_of_association_chain.paginate(:page => params[:page], :per_page => 10)
+  end
+
 end
