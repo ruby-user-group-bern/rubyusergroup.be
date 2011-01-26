@@ -30,3 +30,8 @@ end
 When /^I should not see the link "([^"]*)" to display the full question content$/ do |name|
   page.should have_no_link(name)
 end
+
+Given /^a question titled "([^"]*)" exist$/ do |content|
+  raise "you need to be logged in to have questions" unless @user
+  @question = Factory.create(:question, :title => content)
+end

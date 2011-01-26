@@ -19,6 +19,11 @@ Given /^I am a new, authenticated user$/ do
   When %{I sign in with "#{email}" and password "#{password}"}
 end
 
+Given /^I am a new, authenticated admin$/ do
+  @user = Factory(:admin)
+  When %{I sign in with "#{@user.email}" and password "#{@user.password}"}
+end
+
 When /^I log out$/ do
   visit('/users/sign_out')
 end
