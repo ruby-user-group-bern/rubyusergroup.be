@@ -1,3 +1,8 @@
+%h1= t('views.question.tag_cloud')
+#tag-cloud
+  - tag_cloud(Question.tag_counts_on(:tags), %w(tag-size1 tag-size2 tag-size3 tag-size4)) do |tag, css_class|
+    = link_to tag.name, questions_path(:tagged_with => tag.name), :class => css_class
+
 - if can? :read, Topic
   %h1= t('views.topic.title')
   = render '/topics/list', :topics => Topic.top_5
@@ -5,8 +10,3 @@
   %p= t('views.topic.text')
   - if can? :create, Topic
     = render '/topics/form', :topic => Topic.new
-
-%h1= t('views.question.tag_cloud')
-#tag-cloud
-  - tag_cloud(Question.tag_counts_on(:tags), %w(tag-size1 tag-size2 tag-size3 tag-size4)) do |tag, css_class|
-    = link_to tag.name, questions_path(:tagged_with => tag.name), :class => css_class
