@@ -39,7 +39,7 @@
         = yield
         #footer
           %p= raw t('layout.footer.text')
-      - if user_signed_in?
+      - if user_signed_in? || home_page_active?
         #sidebar
           = render_sidebar
 

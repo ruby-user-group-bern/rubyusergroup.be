@@ -22,4 +22,8 @@ module ApplicationHelper
     "active" if controller_name == name
   end
 
+  def home_page_active?
+    controller_name == 'home'
+  end
+
 end

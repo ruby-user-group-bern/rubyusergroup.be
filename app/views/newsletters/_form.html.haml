@@ -1,0 +1,5 @@
+%h1= t('views.newsletter.title')
+%p= t('views.newsletter.text')
+= simple_form_for newsletter do |f|
+  = f.input :email, :label => false
+  = f.button :submit, :class => "medium button"

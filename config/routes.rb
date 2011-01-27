@@ -12,6 +12,7 @@ RubyusergroupBe::Application.routes.draw do
   end
 
   resources :feedbacks
+  resources :newsletters
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

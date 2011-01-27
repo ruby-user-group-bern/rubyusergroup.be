@@ -9,6 +9,8 @@ de:
         create: "Antworten"
       feedback:
         create: "%{model} senden"
+      newsletter:
+        create: "Abonnieren"
 
   simple_form:
     hints:
@@ -17,3 +19,5 @@ de:
     placeholders:
       topic:
         title: "Ihr Themenvorschlag..."
+      newsletter:
+        email: "E-Mail Adresse"
