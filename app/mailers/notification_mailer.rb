@@ -23,4 +23,9 @@ class NotificationMailer < ActionMailer::Base
          :subject => "Feedback von #{feedback.author}")
   end
 
+  def new_newsletter_email(newsletter)
+    mail(:to => newsletter.email,
+         :subject => 'Ruby User Group Bern Newsletter')
+  end
+
 end
