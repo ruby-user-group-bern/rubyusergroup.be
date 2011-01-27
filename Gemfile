@@ -14,17 +14,21 @@ gem 'responders'
 # Models
 gem 'acts-as-taggable-on'
 
-# Database
-gem 'sqlite3-ruby', :require => 'sqlite3'
-
 # Views
 gem 'haml'
 gem 'simple_form'
+
+group :production do
+  gem 'mysql'
+end
 
 group :test, :development do
   gem 'rspec-rails'
   gem 'cucumber-rails'
   gem 'factory_girl_rails'
+
+  # Database
+  gem 'sqlite3-ruby', :require => 'sqlite3'
 end
 
 group :test do
