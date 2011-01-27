@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require "spec_helper"
 
 describe NotificationMailer do
@@ -65,6 +66,22 @@ describe NotificationMailer do
     its(:subject) { should == 'Feedback von Jakobli' }
     its(:encoded) { should =~ /You doing it great!/ }
     its(:encoded) { should =~ /We should organize a bbq.../ }
+  end
+
+  describe "#new_newsletter_email" do
+    let(:newsletter) do
+      Factory(:newsletter, :email => 'freddy@gmail.com')
+    end
+
+    before do
+      ENV.should_receive(:[]).with('GMAIL_LOGIN').any_number_of_times.and_return('newsletter@rubyusergroup.be')
+    end
+
+    subject { NotificationMailer.new_newsletter_email(newsletter).deliver }
+
+    its(:to) { should == ['freddy@gmail.com'] }
+    its(:subject) { should == 'Ruby User Group Bern Newsletter' }
+    its(:encoded) { should =~ /Du hast den Newsletter erfolgreich abonniert./ }
   end
 
 end

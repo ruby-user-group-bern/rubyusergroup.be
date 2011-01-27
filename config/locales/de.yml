@@ -15,6 +15,10 @@ de:
       create:
         notice: "%{resource_name} wurde erfolgreich gesendet."
         alert: "%{resource_name} konnte nicht gesendet werden."
+    newsletters:
+      create:
+        notice: "Danke für das abonnieren unseres Newsletters."
+        alert: "%{resource_name} konnte nicht abonniert werden."
 
   layout:
     footer:
