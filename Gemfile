@@ -19,7 +19,7 @@ gem 'haml'
 gem 'simple_form'
 
 group :production do
-  gem 'mysql'
+  gem 'mysql2'
 end
 
 group :test, :development do
