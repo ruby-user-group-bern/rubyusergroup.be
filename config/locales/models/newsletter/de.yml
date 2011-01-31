@@ -1,10 +1,11 @@
 de:
   activerecord:
-    attributes:
-      newsletter:
-        email: E-Mail
     errors:
       models:
         newsletter:
-          taken: "wurde bei der Abonnierung des Newsletters schon verwendet."
-
+          attributes:
+            email:
+              taken: "wurde bei der Abonnierung des Newsletters schon verwendet."
+    attributes:
+      newsletter:
+        email: E-Mail
