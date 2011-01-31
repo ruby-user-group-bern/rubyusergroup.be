@@ -1,2 +1,2 @@
 #! /bin/bash
-phd $0 rubyusergroup_be rubyusergroup_be
+phd $0 rubyusergroup_be rubyusergroup.be
