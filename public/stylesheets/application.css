@@ -214,8 +214,7 @@ body {
 }
 
 #questions ul.question-list li h4 {
-  margin: 0 0 0 20px;
-  float: left;
+  margin: 0 0 0 75px;
 }
 
 #questions ul.question-list li {
@@ -238,16 +237,16 @@ body {
   color: #333;
   font-size: 90%;
   line-height: 1.6;
-  text-align: left;
-  display: inline-block;
-  margin: 9px 0 0 10px;
+  margin: 9px 0 0 75px;
 }
+
 #questions .question-list .left { float: left; }
 #questions .question-list .nr { text-align: right; font-size: 20pt; color: #333; font-weight: bold; }
 #questions .question-list .avatar img {
   border: 1px solid #EFEFEF;
   margin: 15px 0 0 0;
   padding: 2px;
+  width: 48px;
 }
 
 #questions .question-list h4 {
@@ -280,8 +279,7 @@ body {
 }
 
 #members ul.member-list li h4 {
-  margin: 0 0 0 20px;
-  float: left;
+  margin: 0 0 0 75px;
 }
 
 #members ul.member-list li {
@@ -298,6 +296,8 @@ body {
 #members .member-list p.text {
   margin: 10px 0px 0px 72px;
   padding: 0;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 #members .member-list .created {
@@ -305,8 +305,7 @@ body {
   font-size: 90%;
   line-height: 1.6;
   text-align: left;
-  display: inline-block;
-  margin: 9px 0 0 10px;
+  margin: 9px 0 0 72px;
 }
 #members .member-list .left { float: left; }
 #members .member-list .nr { text-align: right; font-size: 20pt; color: #333; font-weight: bold; }
@@ -314,6 +313,7 @@ body {
   border: 1px solid #EFEFEF;
   margin: 15px 0 0 0;
   padding: 2px;
+  width: 48px;
 }
 
 #members .member-list h4 {
@@ -382,6 +382,7 @@ body {
   border: 1px solid #EFEFEF;
   margin: 0 0 0 0;
   padding: 2px;
+  width: 32px;
 }
 
 /* Sidebar */
@@ -539,7 +540,6 @@ span.votes-info {
   text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
   border-bottom: 1px solid rgba(0,0,0,0.25);
   position: relative;
-  cursor: pointer;
   text-align: center;
   font-size: 12px;
   float: left;
