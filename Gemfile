@@ -5,6 +5,7 @@ gem 'devise'
 gem 'cancan'
 gem "will_paginate", "~> 3.0.pre2"
 gem 'xmpp4r'
+gem 'delayed_job'
 
 # Controllers
 gem 'inherited_resources'
