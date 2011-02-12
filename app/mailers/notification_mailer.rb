@@ -7,14 +7,14 @@ class NotificationMailer < ActionMailer::Base
   def new_question_email(question, user)
     @question = question
     mail(:to => user.email,
-         :subject => "#{question.author} fragt: #{question}")
+         :subject => question.email_subject)
   end
 
   def new_answer_email(answer, user)
     @answer = answer
     @question = answer.question
     mail(:to => user.email,
-         :subject => "#{answer.author} antwortet auf: #{answer.question}")
+         :subject => "Re: #{@question.email_subject}")
   end
 
   def new_feedback_email(feedback)

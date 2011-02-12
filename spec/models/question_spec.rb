@@ -45,7 +45,26 @@ describe Question do
     end
   end
 
-  describe "scopes: " do
+  describe "finders: " do
+
+    describe "#participants" do
+      let(:author) { Factory(:user) }
+      subject { Factory(:question, :author => author) }
+      before do
+        subject.answers << @answer1 = Factory(:answer)
+        Factory(:answer)
+        subject.answers << Factory(:answer, :author => author)
+        subject.answers << @answer2 = Factory(:answer)
+        Factory(:user)
+      end
+
+      it "should return the question author and the answer authors" do
+        subject.participants.map(&:id).should =~ [author.id,
+                                                  @answer1.author.id,
+                                                  @answer2.author.id]
+      end
+    end
+
     describe "#solved, #unsolved" do
       before(:each) do
         @solved1 = Factory(:question, :solved => true)

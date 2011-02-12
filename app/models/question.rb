@@ -21,12 +21,21 @@ class Question < ActiveRecord::Base
 
   notify :after_create, :jabber_text
 
+  def participants
+    participant_ids = [author.id] + answers.map(&:author_id)
+    User.where('id IN (?)', participant_ids)
+  end
+
   def to_s
     title
   end
 
   def jabber_text
     "Frage von #{author}:\n\n#{title}\n#{content}"
+  end
+
+  def email_subject
+    "#{self}, von #{author}"
   end
 
   after_create :send_email

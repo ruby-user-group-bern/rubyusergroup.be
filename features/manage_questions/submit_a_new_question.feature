@@ -6,10 +6,18 @@ Feature: submit a question
     When I follow "Neue Frage"
 
   Scenario: add a question
+    Given the following users:
+      | E-Mail             |
+      | rubyist@rails.com  |
+      | martin@sinatra.com |
+      | werner@rack.de     |
     When I fill in "Titel" with "What is Ruby?"
     And I fill in "Content" with "I'm looking for an outline of Ruby"
     And I press "Frage hinzufügen"
     Then I should see the flash notice "Frage wurde erfolgreich erstellt."
+    And "rubyist@rails.com" should receive an email
+    And "martin@sinatra.com" should receive an email
+    And "werner@rack.de" should receive an email
     And I should see "What is Ruby?"
 
   Scenario: allow the user to post embedded gists
