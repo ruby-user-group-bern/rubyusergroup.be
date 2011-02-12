@@ -12,6 +12,6 @@
   %p.text
     - unless full_text
       - omission = "... #{link_to("mehr", question)}"
-      = raw truncate(question.content, :length => 250, :omission => omission)
+      = truncate(question.content, :length => 250, :omission => omission)
     - else
-      = raw question.content
+      = pretty question.content
