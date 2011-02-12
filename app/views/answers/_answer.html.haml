@@ -7,4 +7,4 @@
   %span.author= answer.author
   %span.created=l answer.created_at
   = render 'answers/actions', :answer => answer
-  %p.text= answer.content
+  %p.text= pretty(answer.content)

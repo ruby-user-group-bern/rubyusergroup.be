@@ -26,4 +26,14 @@ module ApplicationHelper
     controller_name == 'home'
   end
 
+  def coderay(text)
+    text.gsub(/\<code( class="(.+?)")?\>(.+?)\<\/code\>/m) do
+      CodeRay.scan($3, $2).div(:css => :class)
+    end
+  end
+
+  def pretty(text)
+    simple_format coderay(text)
+  end
+
 end
