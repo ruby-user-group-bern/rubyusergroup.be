@@ -1,7 +1,7 @@
 Feature: sign in
 
   Background:
-    Given I have one user "valid@rugb.ch" with password "secret" and login "valid"
+    Given I have one user "valid@rugb.ch" with password "secret"
     And I am on the login page
 
   Scenario: sign in with existing user

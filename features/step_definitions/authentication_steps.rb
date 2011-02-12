@@ -21,7 +21,7 @@ Given /^I am a new, authenticated user$/ do
 end
 
 Given /^I am a new, authenticated admin$/ do
-  @user = put_model(:admin, '<me>')
+  @user = put_model(:admin, '<me>', :email => 'admin@cucumber.com')
   When %{I sign in with "#{@user.email}" and password "#{@user.password}"}
 end
 
