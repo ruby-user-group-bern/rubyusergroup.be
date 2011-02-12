@@ -17,6 +17,8 @@ gem 'acts-as-taggable-on'
 # Views
 gem 'haml'
 gem 'simple_form'
+gem 'rdiscount'
+gem 'coderay'
 
 group :production do
   gem 'mysql2'

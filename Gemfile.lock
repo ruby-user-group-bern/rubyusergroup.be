@@ -46,6 +46,7 @@ GEM
     celerity (0.8.6)
     childprocess (0.1.6)
       ffi (~> 0.6.3)
+    coderay (0.9.7)
     configuration (1.2.0)
     cucumber (0.10.0)
       builder (>= 2.1.2)
@@ -123,6 +124,7 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
+    rdiscount (1.6.8)
     responders (0.6.2)
     rspec (2.3.0)
       rspec-core (~> 2.3.0)
@@ -170,6 +172,7 @@ DEPENDENCIES
   backyard
   cancan
   capybara
+  coderay
   cucumber-rails
   database_cleaner
   devise
@@ -184,6 +187,7 @@ DEPENDENCIES
   launchy
   mysql2
   rails
+  rdiscount
   responders
   rspec-rails
   shoulda
