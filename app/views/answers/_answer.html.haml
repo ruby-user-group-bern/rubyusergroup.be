@@ -6,4 +6,5 @@
   %span.nr= "#{@answer_counter.to_s}."
   %span.author= answer.author
   %span.created=l answer.created_at
+  = render 'answers/actions', :answer => answer
   %p.text= answer.content
