@@ -6,7 +6,14 @@
   padding: 3px 5px;
   overflow: auto;
   font-size: 12px;
-  margin: 12px 0;
+}
+
+.CodeRay br {
+  display:none;
+}
+
+.CodeRay .code br {
+  display:block;
 }
 
 .CodeRay pre {
