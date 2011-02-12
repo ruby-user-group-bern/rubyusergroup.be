@@ -17,7 +17,7 @@ describe NotificationMailer do
     subject { NotificationMailer.new_question_email(question, receiver).deliver }
 
     its(:to) { should == ['send.mails@me.com'] }
-    its(:subject) { should == 'Hansli fragt: What is your favorite color?' }
+    its(:subject) { should == 'What is your favorite color?, von Hansli' }
     its(:encoded) { should =~ /What is your favorite color?/ }
     its(:encoded) { should include('<h1><a href="http://rubyusergroup.be/questions/1">What is your favorite color?</a></h1>') }
     its(:encoded) { should =~ /please tell me what color you like.../ }
@@ -29,7 +29,14 @@ describe NotificationMailer do
       user.stub!(:to_s => 'Ueli')
       user
     end
-    let(:question) { Factory(:question, :title => 'What is your favorite color?') }
+    let(:question_author) do
+      user = Factory(:user)
+      user.stub!(:to_s => 'Maria')
+      user
+    end
+    let(:question) { Factory(:question,
+                             :title => 'What is your favorite color?',
+                             :author => question_author) }
     let(:answer) { Factory(:answer,
                            :question => question,
                            :content => 'I love red',
@@ -37,7 +44,7 @@ describe NotificationMailer do
     subject { NotificationMailer.new_answer_email(answer, receiver).deliver }
 
     its(:to) { should == ['send.mails@me.com'] }
-    its(:subject) { should == 'Ueli antwortet auf: What is your favorite color?' }
+    its(:subject) { should == 'Re: What is your favorite color?, von Maria' }
     its(:encoded) { should =~ /What is your favorite color?/ }
     its(:encoded) { should =~ /I love red/ }
     its(:encoded) { should include('<h1><a href="http://rubyusergroup.be/questions/1">What is your favorite color?</a></h1>') }

@@ -29,6 +29,10 @@ class Question < ActiveRecord::Base
     "Frage von #{author}:\n\n#{title}\n#{content}"
   end
 
+  def email_subject
+    "#{self}, von #{author}"
+  end
+
   after_create :send_email
 
   def send_email
