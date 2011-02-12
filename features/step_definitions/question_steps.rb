@@ -1,3 +1,7 @@
+Given /^a question titled "([^"]*)"$/ do |question_title|
+  put_model(:question, question_title)
+end
+
 Then /^I should see the following questions:$/ do |question_table|
   actual_questions = all('#questions .question').map do |question|
     {

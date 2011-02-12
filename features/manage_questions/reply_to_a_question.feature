@@ -2,7 +2,7 @@ Feature: submit a reply to a question
 
   Background:
     Given I am a new, authenticated user
-    And a question exists with a title of "What is your name?"
+    And a question titled "What is your name?"
 
   Scenario: add a reply to an existing question
     Given I am on the questions page
