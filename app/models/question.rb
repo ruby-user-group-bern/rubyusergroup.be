@@ -21,6 +21,11 @@ class Question < ActiveRecord::Base
 
   notify :after_create, :jabber_text
 
+  def participants
+    participant_ids = [author.id] + answers.map(&:author_id)
+    User.where('id IN (?)', participant_ids)
+  end
+
   def to_s
     title
   end

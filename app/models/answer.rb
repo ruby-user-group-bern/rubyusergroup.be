@@ -19,7 +19,7 @@ class Answer < ActiveRecord::Base
   after_create :send_email
 
   def send_email
-    User.notified_by_email.each do |user|
+    question.participants.notified_by_email.each do |user|
       NotificationMailer.new_answer_email(self, user).deliver
     end
   end
