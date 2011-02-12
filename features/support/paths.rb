@@ -14,7 +14,10 @@ module NavigationHelpers
       question_path(@question)
     when /login page/
       '/users/sign_in'
-
+    when /the #{capture_model} "([^"]*)" page/
+      model_type = $1
+      obj = model(model_type, $2)
+      send "#{model_type}_path", obj
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

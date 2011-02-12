@@ -1,0 +1,5 @@
+- if can? :manage, answer
+  %span.actions
+    = link_to "Bearbeiten", edit_question_answer_path(answer.question, answer)
+    |
+    = link_to "Löschen", [answer.question, answer], :method => :delete, :confirm => "Diese Antwort wirklich löschen?"

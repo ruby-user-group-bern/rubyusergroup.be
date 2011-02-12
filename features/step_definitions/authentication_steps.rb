@@ -2,11 +2,12 @@ Given /^I am not authenticated$/ do
   visit('/users/sign_out') # ensure that at least
 end
 
-Given /^I have one\s+user "([^\"]*)" with password "([^\"]*)" and login "([^\"]*)"$/ do |email, password, login|
-  @user = User.new(:email => email,
-                   :login => login,
-                   :password => password,
-                   :password_confirmation => password)
+Given /^I have one\s+user "([^\"]*)" with password "([^\"]*)"$/ do |email, password|
+  @user = put_model(:user,
+                    '<me>',
+                    :email => email,
+                    :password => password,
+                    :password_confirmation => password)
   @user.save!
 end
 
@@ -15,12 +16,12 @@ Given /^I am a new, authenticated user$/ do
   login = 'Testing man'
   password = 'secretpass'
 
-  Given %{I have one user "#{email}" with password "#{password}" and login "#{login}"}
+  Given %{I have one user "#{email}" with password "#{password}"}
   When %{I sign in with "#{email}" and password "#{password}"}
 end
 
 Given /^I am a new, authenticated admin$/ do
-  @user = Factory(:admin)
+  @user = put_model(:admin, '<me>', :email => 'admin@cucumber.com')
   When %{I sign in with "#{@user.email}" and password "#{@user.password}"}
 end
 

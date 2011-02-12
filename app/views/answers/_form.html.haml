@@ -1,4 +1,4 @@
-- answer = question.answers.build
+- answer ||= question.answers.build
 = simple_form_for [question, answer] do |f|
-  = f.input :content, :input_html => { :rows => 10 }, :label => false
+  = f.input :content, :input_html => { :rows => 10 }
   = f.button :submit
