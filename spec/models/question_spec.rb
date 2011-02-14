@@ -84,4 +84,29 @@ describe Question do
     end
   end
 
+  describe "after creating: " do
+    describe "#send_mail" do
+
+      subject { Question.new(:title => "title?", :content => "hurray?", :author => Factory(:user)) }
+
+      before do
+        Factory(:user, :receive_email_notifications => true)
+      end
+
+      it "delayed job should work off one job" do
+        subject.save!
+        success, failure = Delayed::Worker.new.work_off
+        failure.should == 0
+        success.should == 1
+      end
+
+      it "one mail should be sended" do
+        ActionMailer::Base.deliveries = []
+        subject.save!
+        Delayed::Worker.new.work_off
+        ActionMailer::Base.deliveries.size.should == 1
+      end
+    end
+  end
+
 end

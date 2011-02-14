@@ -6,7 +6,8 @@ Given /^the following questions?:$/ do |question_table|
   question_table.hashes.each do |row|
     attributes = {}
 
-    attributes[:author] = model(:user, row['Author']) if row['Author'].present?
+    user_attributes = {:receive_email_notifications => true}
+    attributes[:author] = model(:user, row['Author'], user_attributes) if row['Author'].present?
     put_model(:question, row['Title'], attributes)
   end
 end

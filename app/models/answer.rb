@@ -20,9 +20,8 @@ class Answer < ActiveRecord::Base
 
   def send_email
     question.participants.notified_by_email.each do |user|
-      NotificationMailer.new_answer_email(self, user).deliver
+      NotificationMailer.delay.new_answer_email(self, user)
     end
   end
-
 
 end

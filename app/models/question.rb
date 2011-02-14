@@ -42,7 +42,7 @@ class Question < ActiveRecord::Base
 
   def send_email
     User.notified_by_email.each do |user|
-      NotificationMailer.new_question_email(self, user).deliver
+      NotificationMailer.delay.new_question_email(self, user)
     end
   end
 

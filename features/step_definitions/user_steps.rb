@@ -4,6 +4,7 @@ Given /^the following users:$/ do |user_table|
     attributes[:id] = row['ID'].to_i if row['ID'].present?
     attributes[:email] = row['E-Mail'] if row['E-Mail'].present?
     attributes[:email] = "#{row['Username']}@gmail.com" if row['Username'].present?
+    attributes[:receive_email_notifications] = true
     put_model(:user, row['Username'], attributes)
   end
 end
