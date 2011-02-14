@@ -30,4 +30,30 @@ describe Answer do
     end
   end
 
+  describe "after creating: " do
+    describe "#send_mail" do
+      before(:each) do
+        @user     = Factory(:user, :receive_email_notifications => true)
+        @question = Factory.create(:question, :author => @user)
+        Delayed::Worker.new.work_off
+      end
+
+      subject { Answer.new(:content => 'I know it!', :question => @question, :author => Factory(:user)) }
+
+      it "delayed job should work off one job" do
+        subject.save
+        success, failure = Delayed::Worker.new.work_off
+        failure.should == 0
+        success.should == 1
+      end
+
+      it "one mail should be sended" do
+        subject.save
+        ActionMailer::Base.deliveries = []
+        Delayed::Worker.new.work_off
+        ActionMailer::Base.deliveries.size.should == 1
+      end
+    end
+  end
+
 end
