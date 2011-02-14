@@ -5,7 +5,8 @@ Given /^(?:|the question "([^"]*)" has )the following answers?:$/ do |*args|
     attributes = {}
     attributes[:question] = model(:question, question) if question.present?
     if row['Author'].present?
-      attributes[:author] = model(:user, row['Author'])
+      user_attributes = {:receive_email_notifications => true}
+      attributes[:author] = model(:user, row['Author'], user_attributes)
     end
 
     put_model(:answer, row['Answer'], attributes)

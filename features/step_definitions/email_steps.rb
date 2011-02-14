@@ -49,6 +49,7 @@ end
 #
 
 Then /^(?:I|they|"([^"]*?)") should receive (an|no|\d+) emails?$/ do |address, amount|
+  work_off_delayed_jobs
   unread_emails_for(address).size.should == parse_email_count(amount)
 end
 
