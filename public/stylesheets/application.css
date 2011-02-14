@@ -228,10 +228,11 @@ body {
   padding: 0 0 20px 0;
 }
 
-#questions .question-list p.text {
+#questions .question-list .text {
   margin: 10px 0px 0px 75px;
   padding: 0;
 }
+#questions .question-list .text p { padding: 0; margin: 0; }
 
 #questions .question-list .created {
   color: #333;
@@ -362,10 +363,12 @@ body {
   padding: 0 0 20px 0;
 }
 
-#answers .answer-list li p.text {
+#answers .answer-list li .text {
   margin: 10px 0px 0px 48px;
   padding: 0;
 }
+
+#answers .answer-list li .text p { margin: 0; padding: 0; }
 
 #answers .answer-list .created {
   color: #333;
